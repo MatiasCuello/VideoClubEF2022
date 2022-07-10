@@ -14,7 +14,7 @@ namespace VideoClubEF2022.Datos.Repositorios.Facades
         bool Existe(Localidad localidad);
         void Borrar(int localidadId);
         bool EstaRelacionado(Localidad localidad);
-        Localidad GetLocalidadPorId(int id);
+        Localidad GetLocalidadPorId(int localidadId);
 
 
     }

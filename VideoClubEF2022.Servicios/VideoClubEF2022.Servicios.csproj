@@ -55,6 +55,7 @@
     <Compile Include="Servicios\Facades\IServicioSoportes.cs" />
     <Compile Include="Servicios\ServicioCalificaciones.cs" />
     <Compile Include="Servicios\ServicioEstados.cs" />
+    <Compile Include="Servicios\ServicioLocalidades.cs" />
     <Compile Include="Servicios\ServicioProvincias.cs" />
     <Compile Include="Servicios\ServicioSoportes.cs" />
   </ItemGroup>

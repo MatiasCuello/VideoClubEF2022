@@ -56,5 +56,12 @@ namespace VideoClubEF2022.Windows
                 { Text = "Provincias" };
             frm.ShowDialog(this);
         }
+
+        private void LocalidadesButton_Click(object sender, EventArgs e)
+        {
+            frmLocalidades frm = new frmLocalidades()
+                { Text = "Localidades" };
+            frm.ShowDialog(this);
+        }
     }
 }

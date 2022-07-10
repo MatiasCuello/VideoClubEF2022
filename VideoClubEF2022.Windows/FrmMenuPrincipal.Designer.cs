@@ -108,6 +108,7 @@ namespace VideoClubEF2022.Windows
             this.LocalidadesButton.Text = "Localidades";
             this.LocalidadesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.LocalidadesButton.UseVisualStyleBackColor = true;
+            this.LocalidadesButton.Click += new System.EventHandler(this.LocalidadesButton_Click);
             // 
             // CalificacionesButton
             // 

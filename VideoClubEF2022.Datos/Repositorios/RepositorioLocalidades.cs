@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,26 +17,85 @@ namespace VideoClubEF2022.Datos.Repositorios
         {
             context = new VideoClubEF2022DbContext();
         }
-    
-
+        
         public void Guardar(Localidad localidad)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (localidad.LocalidadId == 0)
+                {
+                    context.Localidades.Add(localidad);
+
+                }
+                else
+                {
+                    var localidadEnDB = context.Localidades
+                        .SingleOrDefault(l=> l.LocalidadId == localidad.LocalidadId);
+                    if (localidadEnDB == null)
+                    {
+                        throw new Exception("Localidad no encontrada");
+                    }
+
+                    localidadEnDB.NombreLocalidad = localidad.NombreLocalidad;
+                    context.Entry(localidadEnDB).State = EntityState.Modified;
+                    context.SaveChanges();
+                }
+                context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public bool Existe(Localidad localidad)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (localidad.LocalidadId == 0)
+                {
+                    return context.Localidades
+                        .Any(l => l.NombreLocalidad == localidad.NombreLocalidad);
+                }
+                return context.Localidades.Any(l => l.NombreLocalidad == localidad.NombreLocalidad &&
+                                                   l.LocalidadId != localidad.LocalidadId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
-        public void Borrar(int Id)
+        public void Borrar(int localidadId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var localidadEnDB = context.Localidades
+                    .SingleOrDefault(l => l.LocalidadId == localidadId);
+                if (localidadEnDB == null)
+                {
+                    throw new Exception("Localidad no encontrada");
+                }
+                context.Entry(localidadEnDB).State = EntityState.Deleted;
+                context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public bool EstaRelacionado(Localidad localidad)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return context.Localidades
+                    .Any(l => l.LocalidadId == localidad.LocalidadId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public Localidad GetLocalidadPorId(int id)
@@ -45,11 +105,17 @@ namespace VideoClubEF2022.Datos.Repositorios
 
         public List<Localidad> GetLocalidad(Provincia provincia)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return context.Localidades
+                    .Include(l => l.Provincia)
+                    .ToList();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
-
-        
-
     }
 }
 

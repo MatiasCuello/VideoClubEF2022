@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,10 +9,11 @@ namespace VideoClubEF2022.Servicios.Servicios.Facades
 {
     public interface IServicioLocalidades
     {
-        List<Localidad> GetProvincia(Provincia provincia);
+        List<Localidad> GetLocalidad(Provincia provincia);
         void Guardar(Localidad localidad);
         bool Existe(Localidad localidad);
         void Borrar(int localidadId);
         bool EstaRelacionado(Localidad localidad);
+       
     }
 }

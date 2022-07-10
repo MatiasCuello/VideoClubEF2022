@@ -54,6 +54,7 @@
     <Compile Include="EntityTypeConfigurations\CalificacionEntityTypeConfigurations.cs" />
     <Compile Include="EntityTypeConfigurations\EstadosEntityTypeConfigurations.cs" />
     <Compile Include="EntityTypeConfigurations\GenerosEntityTypeConfigurations.cs" />
+    <Compile Include="EntityTypeConfigurations\LocalidadesEntityTypeConfigurations.cs" />
     <Compile Include="EntityTypeConfigurations\ProvinciasEntityTypeConfigurations.cs" />
     <Compile Include="EntityTypeConfigurations\SoporteEntityTypeConfigurations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

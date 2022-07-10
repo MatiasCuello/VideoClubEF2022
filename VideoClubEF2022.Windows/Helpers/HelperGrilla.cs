@@ -52,6 +52,10 @@ namespace VideoClubEF2022.Windows.Helpers
                 case Provincia p:
                     r.Cells[0].Value = ((Provincia)obj).NombreProvincia;
                     break;
+                case Localidad l:
+                    r.Cells[0].Value = ((Localidad) obj).NombreLocalidad;
+                    r.Cells[1].Value = ((Localidad) obj).Provincia.NombreProvincia;
+                    break;
 
 
             }
