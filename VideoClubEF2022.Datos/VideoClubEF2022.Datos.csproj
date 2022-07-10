@@ -54,6 +54,7 @@
     <Compile Include="EntityTypeConfigurations\CalificacionEntityTypeConfigurations.cs" />
     <Compile Include="EntityTypeConfigurations\EstadosEntityTypeConfigurations.cs" />
     <Compile Include="EntityTypeConfigurations\GenerosEntityTypeConfigurations.cs" />
+    <Compile Include="EntityTypeConfigurations\ProvinciasEntityTypeConfigurations.cs" />
     <Compile Include="EntityTypeConfigurations\SoporteEntityTypeConfigurations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\Facades\IRepositorioSoportes.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Repositorios\RepositorioCalificaciones.cs" />
     <Compile Include="Repositorios\RepositorioEstados.cs" />
     <Compile Include="Repositorios\RepositorioLocalidades.cs" />
+    <Compile Include="Repositorios\RepositorioProvincias.cs" />
     <Compile Include="Repositorios\RepositorioSoportes.cs" />
     <Compile Include="VideoClubEF2022DbContext.cs" />
   </ItemGroup>

@@ -98,6 +98,18 @@
     <Compile Include="FrmMenuPrincipal.Designer.cs">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProvincias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProvincias.Designer.cs">
+      <DependentUpon>frmProvincias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProvinciasAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProvinciasAE.Designer.cs">
+      <DependentUpon>frmProvinciasAE.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSoportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +148,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProvincias.resx">
+      <DependentUpon>frmProvincias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProvinciasAE.resx">
+      <DependentUpon>frmProvinciasAE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSoportes.resx">
       <DependentUpon>frmSoportes.cs</DependentUpon>

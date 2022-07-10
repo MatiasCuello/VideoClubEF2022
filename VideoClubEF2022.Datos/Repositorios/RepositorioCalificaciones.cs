@@ -102,7 +102,7 @@ namespace VideoClubEF2022.Datos.Repositorios
             try
             {
                 return context.Peliculas
-                    .Any(p => p.CalificacionId == calificacion.CalificacionId);
+                    .Any(c => c.CalificacionId == calificacion.CalificacionId);
             }
             catch (Exception e)
             {

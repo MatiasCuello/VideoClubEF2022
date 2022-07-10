@@ -49,7 +49,10 @@ namespace VideoClubEF2022.Windows.Helpers
                 case Genero g:
                     r.Cells[0].Value = ((Genero) obj).Descripcion;
                     break;
-                    
+                case Provincia p:
+                    r.Cells[0].Value = ((Provincia)obj).NombreProvincia;
+                    break;
+
 
             }
 

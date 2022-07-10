@@ -1,17 +1,17 @@
 ﻿
 namespace VideoClubEF2022.Windows
 {
-    partial class frmCalificaciones
+    partial class frmProvincias
     {
         /// <summary>
-        /// Variable del diseñador necesaria.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estén usando.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,18 +21,18 @@ namespace VideoClubEF2022.Windows
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.cmnCalificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tsCalificaciones = new System.Windows.Forms.ToolStrip();
+            this.cmnProvincias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tsbProvincias = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbBorrar = new System.Windows.Forms.ToolStripButton();
@@ -40,7 +40,7 @@ namespace VideoClubEF2022.Windows
             this.tsbCerrar = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
-            this.tsCalificaciones.SuspendLayout();
+            this.tsbProvincias.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,7 +50,7 @@ namespace VideoClubEF2022.Windows
             this.panel1.Location = new System.Drawing.Point(0, 54);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(804, 407);
-            this.panel1.TabIndex = 9;
+            this.panel1.TabIndex = 15;
             // 
             // dgvDatos
             // 
@@ -60,7 +60,7 @@ namespace VideoClubEF2022.Windows
             this.dgvDatos.AllowUserToResizeRows = false;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cmnCalificacion});
+            this.cmnProvincias});
             this.dgvDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDatos.Location = new System.Drawing.Point(0, 0);
             this.dgvDatos.MultiSelect = false;
@@ -71,26 +71,26 @@ namespace VideoClubEF2022.Windows
             this.dgvDatos.Size = new System.Drawing.Size(804, 407);
             this.dgvDatos.TabIndex = 0;
             // 
-            // cmnCalificacion
+            // cmnProvincias
             // 
-            this.cmnCalificacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnCalificacion.HeaderText = "Calificaciones";
-            this.cmnCalificacion.Name = "cmnCalificacion";
-            this.cmnCalificacion.ReadOnly = true;
+            this.cmnProvincias.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnProvincias.HeaderText = "Provincias";
+            this.cmnProvincias.Name = "cmnProvincias";
+            this.cmnProvincias.ReadOnly = true;
             // 
-            // tsCalificaciones
+            // tsbProvincias
             // 
-            this.tsCalificaciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbProvincias.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
             this.tsbEditar,
             this.tsbBorrar,
             this.toolStripSeparator1,
             this.tsbCerrar});
-            this.tsCalificaciones.Location = new System.Drawing.Point(0, 0);
-            this.tsCalificaciones.Name = "tsCalificaciones";
-            this.tsCalificaciones.Size = new System.Drawing.Size(804, 54);
-            this.tsCalificaciones.TabIndex = 8;
-            this.tsCalificaciones.Text = "toolStrip1";
+            this.tsbProvincias.Location = new System.Drawing.Point(0, 0);
+            this.tsbProvincias.Name = "tsbProvincias";
+            this.tsbProvincias.Size = new System.Drawing.Size(804, 54);
+            this.tsbProvincias.TabIndex = 14;
+            this.tsbProvincias.Text = "toolStrip1";
             // 
             // tsbNuevo
             // 
@@ -141,23 +141,23 @@ namespace VideoClubEF2022.Windows
             this.tsbCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbCerrar.Click += new System.EventHandler(this.tsbCerrar_Click);
             // 
-            // frmCalificaciones
+            // frmProvincias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 461);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.tsCalificaciones);
+            this.Controls.Add(this.tsbProvincias);
             this.MaximumSize = new System.Drawing.Size(820, 500);
             this.MinimumSize = new System.Drawing.Size(820, 500);
-            this.Name = "frmCalificaciones";
-            this.Text = "Calificaciones";
-            this.Load += new System.EventHandler(this.frmCalificaciones_Load);
+            this.Name = "frmProvincias";
+            this.Text = "frmProvincias";
+            this.Load += new System.EventHandler(this.frmProvincias_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
-            this.tsCalificaciones.ResumeLayout(false);
-            this.tsCalificaciones.PerformLayout();
+            this.tsbProvincias.ResumeLayout(false);
+            this.tsbProvincias.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,8 +167,8 @@ namespace VideoClubEF2022.Windows
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvDatos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnCalificacion;
-        private System.Windows.Forms.ToolStrip tsCalificaciones;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnProvincias;
+        private System.Windows.Forms.ToolStrip tsbProvincias;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbEditar;
         private System.Windows.Forms.ToolStripButton tsbBorrar;
@@ -176,4 +176,3 @@ namespace VideoClubEF2022.Windows
         private System.Windows.Forms.ToolStripButton tsbCerrar;
     }
 }
-

@@ -10,6 +10,6 @@ namespace VideoClubEF2022.Entidades
     {
         public int LocalidadId { get; set; }
         public string NombreLocalidad { get; set; }
-        public Provincia Provincia { get; set; }
+        public int ProvinciaId { get; set; }
     }
 }

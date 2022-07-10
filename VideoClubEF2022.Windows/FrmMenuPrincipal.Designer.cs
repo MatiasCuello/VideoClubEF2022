@@ -155,6 +155,7 @@ namespace VideoClubEF2022.Windows
             this.ProvinciasButton.Text = "Provincias";
             this.ProvinciasButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ProvinciasButton.UseVisualStyleBackColor = true;
+            this.ProvinciasButton.Click += new System.EventHandler(this.ProvinciasButton_Click);
             // 
             // SalirButton
             // 

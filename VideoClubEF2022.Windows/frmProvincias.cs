@@ -14,26 +14,40 @@ using VideoClubEF2022.Windows.Helpers;
 
 namespace VideoClubEF2022.Windows
 {
-    public partial class frmEstados : Form
+    public partial class frmProvincias : Form
     {
-        public frmEstados()
+        public frmProvincias()
         {
             InitializeComponent();
         }
 
-        private IServicioEstados servicio;
-        private List<Estado> lista;
+        private IServicioProvincias servicio;
+        private List<Provincia> lista;
+
+        private void frmProvincias_Load(object sender, EventArgs e)
+        {
+            servicio = new ServicioProvincias();
+            try
+            {
+                lista = servicio.GetProvincia();
+                HelperForm.MostrarDatosEnGrilla(dgvDatos, lista);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                throw;
+            }
+        }
 
         private void tsbCerrar_Click(object sender, EventArgs e)
         {
-
             Close();
         }
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            frmEstadosAE frm = new frmEstadosAE()
-                { Text = "Agregar Estado" };
+            frmProvinciasAE frm = new frmProvinciasAE()
+                { Text = "Agregar Provincia" };
             DialogResult dr = frm.ShowDialog(this);
             if (dr == DialogResult.Cancel)
             {
@@ -42,19 +56,19 @@ namespace VideoClubEF2022.Windows
 
             try
             {
-                Estado estado = frm.GetEstado();
-                if (!servicio.Existe(estado))
+                Provincia provincia = frm.GetProvincia();
+                if (!servicio.Existe(provincia))
                 {
-                    servicio.Guardar(estado);
+                    servicio.Guardar(provincia);
                     DataGridViewRow r = HelperGrilla.ConstruirFila(dgvDatos);
-                    HelperGrilla.SetearFila(r, estado);
+                    HelperGrilla.SetearFila(r, provincia);
                     HelperGrilla.AgregarFila(dgvDatos, r);
-                    HelperMensaje.Mensaje(TipoMensaje.OK, "Estado agregado", "Mensaje");
+                    HelperMensaje.Mensaje(TipoMensaje.OK, "Provincia agregada", "Mensaje");
 
                 }
                 else
                 {
-                    HelperMensaje.Mensaje(TipoMensaje.ERROR, "Soporte repetido, alta denegada", "Error");
+                    HelperMensaje.Mensaje(TipoMensaje.ERROR, "Provincia repetida, alta denegada", "Error");
                 }
             }
             catch (Exception exception)
@@ -72,37 +86,36 @@ namespace VideoClubEF2022.Windows
             }
 
             var r = dgvDatos.SelectedRows[0];
-            Estado es = (Estado)r.Tag;
-            Estado estadoAuxiliar = (Estado)es.Clone();
-            frmEstadosAE frm = new frmEstadosAE()
-                { Text = "Editar Estado" };
-            frm.SetEstado(es);
+            Provincia p = (Provincia)r.Tag;
+            Provincia provinciaAuxiliar = (Provincia)p.Clone();
+            frmProvinciasAE frm = new frmProvinciasAE()
+                { Text = "Editar Provincia" };
+            frm.SetProvincia(p);
             DialogResult dr = frm.ShowDialog(this);
             if (dr == DialogResult.Cancel)
             {
                 return;
             }
-
             try
             {
-                es = frm.GetEstado();
-                if (!servicio.Existe(es))
+                p = frm.GetProvincia();
+                if (!servicio.Existe(p))
                 {
-                    servicio.Guardar(es);
-                    HelperGrilla.SetearFila(r, es);
-                    HelperMensaje.Mensaje(TipoMensaje.OK, "Estado modificado", "Mensaje");
+                    servicio.Guardar(p);
+                    HelperGrilla.SetearFila(r, p);
+                    HelperMensaje.Mensaje(TipoMensaje.OK, "Provincia modificada", "Mensaje");
 
                 }
                 else
                 {
-                    HelperGrilla.SetearFila(r, estadoAuxiliar);
-                    HelperMensaje.Mensaje(TipoMensaje.ERROR, "No se pudo modificar el estado ", "Error");
+                    HelperGrilla.SetearFila(r, provinciaAuxiliar);
+                    HelperMensaje.Mensaje(TipoMensaje.ERROR, "Provincia repetida\nModificacion denegada ", "Error");
 
                 }
             }
             catch (Exception exception)
             {
-                HelperGrilla.SetearFila(r, estadoAuxiliar);
+                HelperGrilla.SetearFila(r, provinciaAuxiliar);
                 HelperMensaje.Mensaje(TipoMensaje.ERROR, exception.Message, "Error");
             }
         }
@@ -117,8 +130,8 @@ namespace VideoClubEF2022.Windows
             try
             {
                 var r = dgvDatos.SelectedRows[0];
-                Estado es = (Estado)r.Tag;
-                DialogResult dr = MessageBox.Show("¿Desea eliminar el estado seleccionado?",
+                Provincia p = (Provincia)r.Tag;
+                DialogResult dr = MessageBox.Show("¿Desea eliminar la provincia seleccionada?",
                     "Confirmar",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button2);
@@ -127,16 +140,16 @@ namespace VideoClubEF2022.Windows
                     return;
                 }
 
-                if (!servicio.EstaRelacionado(es))
+                if (!servicio.EstaRelacionado(p))
                 {
-                    servicio.Borrar(es.EstadoId);
+                    servicio.Borrar(p.ProvinciaId);
                     HelperGrilla.BorrarFila(dgvDatos, r);
-                    HelperMensaje.Mensaje(TipoMensaje.OK, "Estado eliminado!", "Mensaje");
+                    HelperMensaje.Mensaje(TipoMensaje.OK, "Provincia eliminada!", "Mensaje");
 
                 }
                 else
                 {
-                    HelperMensaje.Mensaje(TipoMensaje.ERROR, "Estado relacionado, baja denegada", "Error");
+                    HelperMensaje.Mensaje(TipoMensaje.ERROR, "Provincia relacionada, baja denegada", "Error");
 
                 }
             }
@@ -144,21 +157,6 @@ namespace VideoClubEF2022.Windows
             {
                 HelperMensaje.Mensaje(TipoMensaje.ERROR, exception.Message, "Error");
 
-            }
-        }
-
-        private void frmEstados_Load(object sender, EventArgs e)
-        {
-            servicio = new ServicioEstados();
-            try
-            {
-                lista = servicio.GetEstado();
-                HelperForm.MostrarDatosEnGrilla(dgvDatos, lista);
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception);
-                throw;
             }
         }
     }
