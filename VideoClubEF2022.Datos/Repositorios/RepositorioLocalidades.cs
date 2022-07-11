@@ -22,24 +22,29 @@ namespace VideoClubEF2022.Datos.Repositorios
         {
             try
             {
+                //if (localidad.Provincia != null)
+                //{
+                //    context.Provincias.Attach(localidad.Provincia);
+                //}
                 if (localidad.LocalidadId == 0)
                 {
                     context.Localidades.Add(localidad);
-
                 }
                 else
                 {
                     var localidadEnDB = context.Localidades
-                        .SingleOrDefault(l=> l.LocalidadId == localidad.LocalidadId);
+                        .SingleOrDefault(l => l.LocalidadId == localidad.LocalidadId);
                     if (localidadEnDB == null)
                     {
-                        throw new Exception("Localidad no encontrada");
+                        throw new Exception("Código de localidad inexistente...");
                     }
 
                     localidadEnDB.NombreLocalidad = localidad.NombreLocalidad;
+                    localidadEnDB.ProvinciaId = localidad.ProvinciaId;
                     context.Entry(localidadEnDB).State = EntityState.Modified;
-                    context.SaveChanges();
+
                 }
+
                 context.SaveChanges();
             }
             catch (Exception e)
@@ -89,8 +94,13 @@ namespace VideoClubEF2022.Datos.Repositorios
         {
             try
             {
-                return context.Localidades
-                    .Any(l => l.LocalidadId == localidad.LocalidadId);
+                return 
+                    context.Socios
+                    .Any(s => s.LocalidadId == localidad.LocalidadId) &&
+                    context.Empleados
+                        .Any(e => e.LocalidadId == localidad.LocalidadId) &&
+                    context.Proveedores
+                        .Any(p=>p.LocalidadId==localidad.LocalidadId);
             }
             catch (Exception e)
             {
@@ -103,7 +113,7 @@ namespace VideoClubEF2022.Datos.Repositorios
             throw new NotImplementedException();
         }
 
-        public List<Localidad> GetLocalidad(Provincia provincia)
+        public List<Localidad> GetLista(Provincia provincia)
         {
             try
             {

@@ -9,7 +9,7 @@ namespace VideoClubEF2022.Servicios.Servicios.Facades
 {
     public interface IServicioProvincias
     {
-        List<Provincia> GetProvincia();
+        List<Provincia> GetLista();
         void Guardar(Provincia provincia);
         void Borrar(int provinciaId);
         bool Existe(Provincia provincia);

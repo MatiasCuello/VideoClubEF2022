@@ -25,14 +25,14 @@ namespace VideoClubEF2022.Datos
         //dbsets es la abstraccion de las tablas en EF
 
         public DbSet<Calificacion> Calificaciones { get; set; }
-        //public DbSet<Empleado> Empleados { get; set; }
+        public DbSet<Empleado> Empleados { get; set; }
         public DbSet<Estado> Estados { get; set; }
         public DbSet<Genero> Generos { get; set; }
         public DbSet<Localidad> Localidades { get; set; }
         public DbSet<Pelicula> Peliculas { get; set; }
-        //public DbSet<Proveedor> Proveedores { get; set; }
+        public DbSet<Proveedor> Proveedores { get; set; }
         public DbSet<Provincia> Provincias { get; set; }
-        //public DbSet<Socio> Socios { get; set; }
+        public DbSet<Socio> Socios { get; set; }
         public DbSet<Soporte> Soportes { get; set; }
         //public DbSet<TipoDocumento> TipoDocumentos { get; set; }
 

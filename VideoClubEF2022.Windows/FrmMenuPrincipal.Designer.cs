@@ -40,6 +40,9 @@ namespace VideoClubEF2022.Windows
             this.SoportesButton = new System.Windows.Forms.Button();
             this.ProvinciasButton = new System.Windows.Forms.Button();
             this.SalirButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // GenerosButton
@@ -101,7 +104,7 @@ namespace VideoClubEF2022.Windows
             // LocalidadesButton
             // 
             this.LocalidadesButton.Image = global::VideoClubEF2022.Windows.Properties.Resources.location_30px;
-            this.LocalidadesButton.Location = new System.Drawing.Point(142, 19);
+            this.LocalidadesButton.Location = new System.Drawing.Point(141, 19);
             this.LocalidadesButton.Name = "LocalidadesButton";
             this.LocalidadesButton.Size = new System.Drawing.Size(96, 59);
             this.LocalidadesButton.TabIndex = 14;
@@ -170,6 +173,26 @@ namespace VideoClubEF2022.Windows
             this.SalirButton.UseVisualStyleBackColor = true;
             this.SalirButton.Click += new System.EventHandler(this.SalirButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(353, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(294, 32);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "VIDEOCLUB SYSTEM";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VideoClubEF2022.Windows.Properties.Resources.dvd_logo_30px;
+            this.pictureBox1.Location = new System.Drawing.Point(298, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,6 +200,8 @@ namespace VideoClubEF2022.Windows
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(684, 261);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.GenerosButton);
             this.Controls.Add(this.ProveedoresButton);
             this.Controls.Add(this.EmpleadosButton);
@@ -191,8 +216,12 @@ namespace VideoClubEF2022.Windows
             this.MaximumSize = new System.Drawing.Size(700, 300);
             this.MinimumSize = new System.Drawing.Size(700, 300);
             this.Name = "FrmMenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenuPrincipal";
+            this.TopMost = true;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -209,5 +238,7 @@ namespace VideoClubEF2022.Windows
         private System.Windows.Forms.Button SoportesButton;
         private System.Windows.Forms.Button ProvinciasButton;
         private System.Windows.Forms.Button SalirButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -9,7 +9,7 @@ namespace VideoClubEF2022.Datos.Repositorios.Facades
 {
    public interface IRepositorioLocalidades
     {
-        List<Localidad> GetLocalidad(Provincia provincia);
+        List<Localidad> GetLista(Provincia provincia);
         void Guardar(Localidad localidad);
         bool Existe(Localidad localidad);
         void Borrar(int localidadId);

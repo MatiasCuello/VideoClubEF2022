@@ -55,11 +55,11 @@ namespace VideoClubEF2022.Servicios.Servicios
             }
         }
 
-        public List<Localidad> GetLocalidad(Provincia provincia)
+        public List<Localidad> GetLista(Provincia provincia)
         {
             try
             {
-                return repositorio.GetLocalidad(provincia);
+                return repositorio.GetLista(provincia);
             }
             catch (Exception e)
             {
@@ -69,7 +69,15 @@ namespace VideoClubEF2022.Servicios.Servicios
 
         public void Guardar(Localidad localidad)
         {
-            throw new NotImplementedException();
+
+            try
+            {
+                repositorio.Guardar(localidad);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
     }
 }

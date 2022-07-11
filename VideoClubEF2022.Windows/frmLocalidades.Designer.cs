@@ -39,7 +39,7 @@ namespace VideoClubEF2022.Windows
             this.tsbBorrar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbCerrar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.tsbFiltrar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
@@ -57,7 +57,7 @@ namespace VideoClubEF2022.Windows
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 54);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 396);
+            this.panel1.Size = new System.Drawing.Size(804, 407);
             this.panel1.TabIndex = 11;
             // 
             // dgvDatos
@@ -77,7 +77,7 @@ namespace VideoClubEF2022.Windows
             this.dgvDatos.ReadOnly = true;
             this.dgvDatos.RowHeadersVisible = false;
             this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDatos.Size = new System.Drawing.Size(800, 396);
+            this.dgvDatos.Size = new System.Drawing.Size(804, 407);
             this.dgvDatos.TabIndex = 1;
             // 
             // cmnLocalidades
@@ -102,7 +102,7 @@ namespace VideoClubEF2022.Windows
             this.tsbBorrar,
             this.toolStripSeparator1,
             this.tsbCerrar,
-            this.toolStripButton2,
+            this.tsbFiltrar,
             this.toolStripSeparator2,
             this.toolStripButton1,
             this.toolStripButton5,
@@ -111,7 +111,7 @@ namespace VideoClubEF2022.Windows
             this.toolStripButton3});
             this.tsLocalidades.Location = new System.Drawing.Point(0, 0);
             this.tsLocalidades.Name = "tsLocalidades";
-            this.tsLocalidades.Size = new System.Drawing.Size(800, 54);
+            this.tsLocalidades.Size = new System.Drawing.Size(804, 54);
             this.tsLocalidades.TabIndex = 10;
             this.tsLocalidades.Text = "toolStrip1";
             // 
@@ -135,6 +135,7 @@ namespace VideoClubEF2022.Windows
             this.tsbEditar.Size = new System.Drawing.Size(41, 51);
             this.tsbEditar.Text = "Editar";
             this.tsbEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
             // 
             // tsbBorrar
             // 
@@ -145,6 +146,7 @@ namespace VideoClubEF2022.Windows
             this.tsbBorrar.Size = new System.Drawing.Size(43, 51);
             this.tsbBorrar.Text = "Borrar";
             this.tsbBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbBorrar.Click += new System.EventHandler(this.tsbBorrar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -163,15 +165,15 @@ namespace VideoClubEF2022.Windows
             this.tsbCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbCerrar.Click += new System.EventHandler(this.tsbCerrar_Click);
             // 
-            // toolStripButton2
+            // tsbFiltrar
             // 
-            this.toolStripButton2.Image = global::VideoClubEF2022.Windows.Properties.Resources.filter_30px;
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(41, 51);
-            this.toolStripButton2.Text = "Filtrar";
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbFiltrar.Image = global::VideoClubEF2022.Windows.Properties.Resources.filter_30px;
+            this.tsbFiltrar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbFiltrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbFiltrar.Name = "tsbFiltrar";
+            this.tsbFiltrar.Size = new System.Drawing.Size(41, 51);
+            this.tsbFiltrar.Text = "Filtrar";
+            this.tsbFiltrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator2
             // 
@@ -227,10 +229,12 @@ namespace VideoClubEF2022.Windows
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(804, 461);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tsLocalidades);
+            this.MaximumSize = new System.Drawing.Size(820, 500);
+            this.MinimumSize = new System.Drawing.Size(820, 500);
             this.Name = "frmLocalidades";
             this.Text = "frmLocalidades";
             this.Load += new System.EventHandler(this.frmLocalidades_Load);
@@ -255,7 +259,7 @@ namespace VideoClubEF2022.Windows
         private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnLocalidades;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnProvincias;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton tsbFiltrar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton5;

@@ -13,7 +13,7 @@ namespace VideoClubEF2022.Entidades
         public string Apellido { get; set; }
         public string Direccion { get; set; }
         public string Provincia { get; set; }
-        public string Localidad { get; set; }
+        public int LocalidadId { get; set; }
         public string TelefonoMovil { get; set; }
         public string CorreoElectronico { get; set; }
         public bool Sancionado { get; set; } = false;

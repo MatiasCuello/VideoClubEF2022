@@ -14,7 +14,7 @@ namespace VideoClubEF2022.Entidades
         public TipoDocumento TipoDocumento { get; set; }
         public string Direccion { get; set; }
         public Provincia Provincia { get; set; }
-        public Localidad Localidad { get; set; }
+        public int LocalidadId { get; set; }
         public string TelefonoFijo { get; set; }
         public string TelefonoMovil { get; set; }
         public string CorreoElectronico { get; set; }

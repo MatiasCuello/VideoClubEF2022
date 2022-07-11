@@ -10,7 +10,7 @@ namespace VideoClubEF2022.Entidades
     {
         public int ProvinciaId { get; set; }
         public string NombreProvincia { get; set; }
-        public virtual ICollection<Localidad> Localidades { get; set; } = new List<Localidad>();
+        public ICollection<Localidad> Localidades { get; set; } = new List<Localidad>();
 
         public object Clone()
         {

@@ -54,11 +54,11 @@ namespace VideoClubEF2022.Servicios.Servicios
             }
         }
 
-        public List<Provincia> GetProvincia()
+        public List<Provincia> GetLista()
         {
             try
             {
-                return repositorio.GetProvincia();
+                return repositorio.GetLista();
             }
             catch (Exception e)
             {

@@ -17,7 +17,7 @@ namespace VideoClubEF2022.Windows
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmMenuPrincipal()
-                { Text = "Menu Principal VIDEOCLUB" });
+                { Text = "VideoClub System" });
         }
     }
 }

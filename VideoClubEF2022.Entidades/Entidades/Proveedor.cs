@@ -13,7 +13,7 @@ namespace VideoClubEF2022.Entidades
         public string RazonSocial { get; set; }
         public string PersonaDeContacto { get; set; }
         public string Direccion { get; set; }
-        public Localidad Localidad { get; set; }
+        public int LocalidadId { get; set; }
         public Provincia Provincia { get; set; }
         public string TelefonoFijo { get; set; }
         public string TelefonoMovil { get; set; }

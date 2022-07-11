@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmBuscarPorProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarPorProvincia.Designer.cs">
+      <DependentUpon>frmBuscarPorProvincia.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCalificaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     <Compile Include="Helpers\TipoMensaje.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBuscarPorProvincia.resx">
+      <DependentUpon>frmBuscarPorProvincia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCalificaciones.resx">
       <DependentUpon>frmCalificaciones.cs</DependentUpon>
     </EmbeddedResource>

@@ -68,7 +68,7 @@ namespace VideoClubEF2022.Datos.Repositorios
             }
         }
 
-        public List<Provincia> GetProvincia()
+        public List<Provincia> GetLista()
         {
             try
             {

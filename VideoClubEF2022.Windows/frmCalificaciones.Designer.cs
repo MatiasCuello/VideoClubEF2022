@@ -36,7 +36,6 @@ namespace VideoClubEF2022.Windows
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbBorrar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbCerrar = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -84,7 +83,6 @@ namespace VideoClubEF2022.Windows
             this.tsbNuevo,
             this.tsbEditar,
             this.tsbBorrar,
-            this.toolStripSeparator1,
             this.tsbCerrar});
             this.tsCalificaciones.Location = new System.Drawing.Point(0, 0);
             this.tsCalificaciones.Name = "tsCalificaciones";
@@ -125,13 +123,9 @@ namespace VideoClubEF2022.Windows
             this.tsbBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbBorrar.Click += new System.EventHandler(this.tsbBorrar_Click);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 54);
-            // 
             // tsbCerrar
             // 
+            this.tsbCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.tsbCerrar.Image = global::VideoClubEF2022.Windows.Properties.Resources.Salir;
             this.tsbCerrar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -172,7 +166,6 @@ namespace VideoClubEF2022.Windows
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbEditar;
         private System.Windows.Forms.ToolStripButton tsbBorrar;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton tsbCerrar;
     }
 }

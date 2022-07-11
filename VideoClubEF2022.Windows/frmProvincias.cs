@@ -29,7 +29,7 @@ namespace VideoClubEF2022.Windows
             servicio = new ServicioProvincias();
             try
             {
-                lista = servicio.GetProvincia();
+                lista = servicio.GetLista();
                 HelperForm.MostrarDatosEnGrilla(dgvDatos, lista);
             }
             catch (Exception exception)
