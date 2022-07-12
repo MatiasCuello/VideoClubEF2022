@@ -51,14 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityTypeConfigurations\CalificacionEntityTypeConfigurations.cs" />
-    <Compile Include="EntityTypeConfigurations\EstadosEntityTypeConfigurations.cs" />
-    <Compile Include="EntityTypeConfigurations\GenerosEntityTypeConfigurations.cs" />
-    <Compile Include="EntityTypeConfigurations\LocalidadesEntityTypeConfigurations.cs" />
-    <Compile Include="EntityTypeConfigurations\ProvinciasEntityTypeConfigurations.cs" />
-    <Compile Include="EntityTypeConfigurations\SociosEntityTypeConfigurations.cs" />
-    <Compile Include="EntityTypeConfigurations\SoporteEntityTypeConfigurations.cs" />
-    <Compile Include="EntityTypeConfigurations\TiposDocumentosEntityTypeConfigurations.cs" />
+    <Compile Include="EntityTypeConfiguration\CalificacionEntityTypeConfigurations.cs" />
+    <Compile Include="EntityTypeConfiguration\EstadosEntityTypeConfigurations.cs" />
+    <Compile Include="EntityTypeConfiguration\GenerosEntityTypeConfigurations.cs" />
+    <Compile Include="EntityTypeConfiguration\LocalidadesEntityTypeConfigurations.cs" />
+    <Compile Include="EntityTypeConfiguration\PeliculaEntityTypeConfigurations.cs" />
+    <Compile Include="EntityTypeConfiguration\ProvinciasEntityTypeConfigurations.cs" />
+    <Compile Include="EntityTypeConfiguration\SociosEntityTypeConfigurations.cs" />
+    <Compile Include="EntityTypeConfiguration\SoporteEntityTypeConfigurations.cs" />
+    <Compile Include="EntityTypeConfiguration\TiposDocumentosEntityTypeConfigurations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\Facades\IRepositorioSoportes.cs" />
     <Compile Include="Repositorios\Facades\IRepositorioEstados.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Repositorios\RepositorioCalificaciones.cs" />
     <Compile Include="Repositorios\RepositorioEstados.cs" />
     <Compile Include="Repositorios\RepositorioLocalidades.cs" />
+    <Compile Include="Repositorios\RepositorioPeliculas.cs" />
     <Compile Include="Repositorios\RepositorioProvincias.cs" />
     <Compile Include="Repositorios\RepositorioSocios.cs" />
     <Compile Include="Repositorios\RepositorioSoportes.cs" />

@@ -18,7 +18,7 @@ namespace VideoClubEF2022.Datos.Repositorios
         }
         public List<TipoDocumento> GetLista()
         {
-            return context.TipoDocumentos
+            return context.TiposDocumentos
                 .AsNoTracking().ToList();
         }
     }

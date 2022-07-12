@@ -65,18 +65,17 @@ namespace VideoClubEF2022.Windows.Helpers
                     r.Cells[1].Value = ((TipoDocumento)obj).Descripcion;
                    break;
 
-                case Socio socios:
+                case Socio s:
                     r.Cells[0].Value = ((Socio) obj).Nombre;
                     r.Cells[1].Value = ((Socio) obj).Apellido;
                     r.Cells[2].Value = ((Socio) obj).TipoDocumento.Descripcion;
-                    r.Cells[3].Value = ((Socio) obj).Documento;
+                    r.Cells[3].Value = ((Socio) obj).NroDocumento;
                     r.Cells[4].Value = ((Socio) obj).Direccion;
                     r.Cells[5].Value = ((Socio) obj).Localidad.NombreLocalidad;
                     r.Cells[6].Value = ((Socio) obj).Provincia.NombreProvincia;
                     r.Cells[7].Value = ((Socio) obj).FechaNacimiento;
                     r.Cells[8].Value = ((Socio) obj).Activo;
                     r.Cells[9].Value = ((Socio) obj).Sancionado;
-                   
                     break;
 
             }

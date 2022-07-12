@@ -9,7 +9,7 @@ namespace VideoClubEF2022.Datos.Repositorios.Facades
 {
     interface IRepositorioSocios
     {
-        List<Socio> GetLista(Localidad localidad, Provincia provincia, TipoDocumento tipoDocumento);
+        List<Socio> GetLista(Localidad localidad, Provincia provincia,TipoDocumento tipoDocumento);
         void Guardar(Socio socio);
         void Borrar(Socio socio);
         bool Existe(Socio socio);

@@ -9,6 +9,11 @@ namespace VideoClubEF2022.Datos.Repositorios.Facades
 {
     public interface IRepositorioPeliculas
     {
-        List<Pelicula> GetPeliculas();
+        List<Pelicula> GetLista();
+        void Guardar(Pelicula pelicula);
+        bool Existe(Pelicula pelicula);
+        void Borrar(int peliculaId);
+        bool EstaRelacionado(Pelicula pelicula);
+        Localidad GetLocalidadPorId(int peliculaId);
     }
 }

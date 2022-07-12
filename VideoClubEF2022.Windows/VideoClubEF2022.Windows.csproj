@@ -116,6 +116,12 @@
     <Compile Include="FrmMenuPrincipal.Designer.cs">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPeliculas.Designer.cs">
+      <DependentUpon>frmPeliculas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProvincias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPeliculas.resx">
+      <DependentUpon>frmPeliculas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProvincias.resx">
       <DependentUpon>frmProvincias.cs</DependentUpon>
