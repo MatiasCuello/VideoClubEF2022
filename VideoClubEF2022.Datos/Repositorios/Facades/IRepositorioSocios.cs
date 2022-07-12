@@ -9,6 +9,11 @@ namespace VideoClubEF2022.Datos.Repositorios.Facades
 {
     interface IRepositorioSocios
     {
-        List<Socio> GetSocios();
+        List<Socio> GetLista(Provincia provincia,Localidad localidad);
+        void Guardar(Socio socio);
+        void Borrar(Socio socio);
+        bool Existe(Socio socio);
+        bool EstaRelacionado(Socio socio);
+
     }
 }

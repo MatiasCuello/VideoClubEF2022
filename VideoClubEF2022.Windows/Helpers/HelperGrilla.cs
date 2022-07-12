@@ -46,17 +46,29 @@ namespace VideoClubEF2022.Windows.Helpers
                 case Estado es:
                     r.Cells[0].Value = ((Estado)obj).Descripcion;
                     break;
+
                 case Genero g:
-                    r.Cells[0].Value = ((Genero) obj).Descripcion;
+                    r.Cells[0].Value = ((Genero)obj).Descripcion;
                     break;
+
                 case Provincia p:
                     r.Cells[0].Value = ((Provincia)obj).NombreProvincia;
                     break;
+
                 case Localidad l:
-                    r.Cells[0].Value = ((Localidad) obj).NombreLocalidad;
-                    r.Cells[1].Value = ((Localidad) obj).Provincia.NombreProvincia;
+                    r.Cells[0].Value = ((Localidad)obj).NombreLocalidad;
+                    r.Cells[1].Value = ((Localidad)obj).Provincia.NombreProvincia;
                     break;
 
+                case Socio s:
+                    r.Cells[0].Value = ((Socio) obj).Nombre;
+                    r.Cells[1].Value = ((Socio) obj).Apellido;
+                    r.Cells[2].Value = ((Socio) obj).Direccion;
+                    r.Cells[3].Value = ((Socio) obj).Localidad.NombreLocalidad;
+                    r.Cells[4].Value = ((Socio) obj).Provincia.NombreProvincia;
+                    r.Cells[5].Value = ((Socio) obj).Activo;
+                    r.Cells[6].Value = ((Socio) obj).Sancionado;
+                    break;
 
             }
 

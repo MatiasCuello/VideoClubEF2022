@@ -63,5 +63,12 @@ namespace VideoClubEF2022.Windows
                 { Text = "Localidades" };
             frm.ShowDialog(this);
         }
+
+        private void SociosButton_Click(object sender, EventArgs e)
+        {
+            frmSocios frm = new frmSocios()
+                { Text = "Socios" };
+            frm.ShowDialog(this);
+        }
     }
 }

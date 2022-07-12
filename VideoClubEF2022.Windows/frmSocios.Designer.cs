@@ -1,7 +1,7 @@
 ﻿
 namespace VideoClubEF2022.Windows
 {
-    partial class frmLocalidades
+    partial class frmSocios
     {
         /// <summary>
         /// Required designer variable.
@@ -31,16 +31,21 @@ namespace VideoClubEF2022.Windows
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.cmnLocalidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnProvincias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tsLocalidades = new System.Windows.Forms.ToolStrip();
+            this.tsbSocios = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbBorrar = new System.Windows.Forms.ToolStripButton();
             this.tsbCerrar = new System.Windows.Forms.ToolStripButton();
+            this.cmnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnProvincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnSancionado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
-            this.tsLocalidades.SuspendLayout();
+            this.tsbSocios.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -48,9 +53,10 @@ namespace VideoClubEF2022.Windows
             this.panel1.Controls.Add(this.dgvDatos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 54);
+            this.panel1.MaximumSize = new System.Drawing.Size(820, 500);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(804, 407);
-            this.panel1.TabIndex = 11;
+            this.panel1.TabIndex = 17;
             // 
             // dgvDatos
             // 
@@ -60,8 +66,13 @@ namespace VideoClubEF2022.Windows
             this.dgvDatos.AllowUserToResizeRows = false;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cmnLocalidades,
-            this.cmnProvincias});
+            this.cmnNombre,
+            this.cmnApellido,
+            this.cmnDireccion,
+            this.cmnLocalidad,
+            this.cmnProvincia,
+            this.cmnActivo,
+            this.cmnSancionado});
             this.dgvDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDatos.Location = new System.Drawing.Point(0, 0);
             this.dgvDatos.MultiSelect = false;
@@ -70,34 +81,21 @@ namespace VideoClubEF2022.Windows
             this.dgvDatos.RowHeadersVisible = false;
             this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDatos.Size = new System.Drawing.Size(804, 407);
-            this.dgvDatos.TabIndex = 1;
+            this.dgvDatos.TabIndex = 0;
             // 
-            // cmnLocalidades
+            // tsbSocios
             // 
-            this.cmnLocalidades.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnLocalidades.HeaderText = "Localidades";
-            this.cmnLocalidades.Name = "cmnLocalidades";
-            this.cmnLocalidades.ReadOnly = true;
-            // 
-            // cmnProvincias
-            // 
-            this.cmnProvincias.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnProvincias.HeaderText = "Provincias";
-            this.cmnProvincias.Name = "cmnProvincias";
-            this.cmnProvincias.ReadOnly = true;
-            // 
-            // tsLocalidades
-            // 
-            this.tsLocalidades.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbSocios.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
             this.tsbEditar,
             this.tsbBorrar,
             this.tsbCerrar});
-            this.tsLocalidades.Location = new System.Drawing.Point(0, 0);
-            this.tsLocalidades.Name = "tsLocalidades";
-            this.tsLocalidades.Size = new System.Drawing.Size(804, 54);
-            this.tsLocalidades.TabIndex = 10;
-            this.tsLocalidades.Text = "toolStrip1";
+            this.tsbSocios.Location = new System.Drawing.Point(0, 0);
+            this.tsbSocios.MaximumSize = new System.Drawing.Size(820, 500);
+            this.tsbSocios.Name = "tsbSocios";
+            this.tsbSocios.Size = new System.Drawing.Size(804, 54);
+            this.tsbSocios.TabIndex = 16;
+            this.tsbSocios.Text = "toolStrip1";
             // 
             // tsbNuevo
             // 
@@ -108,7 +106,6 @@ namespace VideoClubEF2022.Windows
             this.tsbNuevo.Size = new System.Drawing.Size(46, 51);
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbEditar
             // 
@@ -119,7 +116,6 @@ namespace VideoClubEF2022.Windows
             this.tsbEditar.Size = new System.Drawing.Size(41, 51);
             this.tsbEditar.Text = "Editar";
             this.tsbEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
             // 
             // tsbBorrar
             // 
@@ -130,7 +126,6 @@ namespace VideoClubEF2022.Windows
             this.tsbBorrar.Size = new System.Drawing.Size(43, 51);
             this.tsbBorrar.Text = "Borrar";
             this.tsbBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tsbBorrar.Click += new System.EventHandler(this.tsbBorrar_Click);
             // 
             // tsbCerrar
             // 
@@ -142,25 +137,73 @@ namespace VideoClubEF2022.Windows
             this.tsbCerrar.Size = new System.Drawing.Size(43, 51);
             this.tsbCerrar.Text = "Cerrar";
             this.tsbCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tsbCerrar.Click += new System.EventHandler(this.tsbCerrar_Click);
             // 
-            // frmLocalidades
+            // cmnNombre
+            // 
+            this.cmnNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnNombre.HeaderText = "Nombre";
+            this.cmnNombre.Name = "cmnNombre";
+            this.cmnNombre.ReadOnly = true;
+            // 
+            // cmnApellido
+            // 
+            this.cmnApellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnApellido.HeaderText = "Apellido";
+            this.cmnApellido.Name = "cmnApellido";
+            this.cmnApellido.ReadOnly = true;
+            // 
+            // cmnDireccion
+            // 
+            this.cmnDireccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnDireccion.HeaderText = "Direccion";
+            this.cmnDireccion.Name = "cmnDireccion";
+            this.cmnDireccion.ReadOnly = true;
+            // 
+            // cmnLocalidad
+            // 
+            this.cmnLocalidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnLocalidad.HeaderText = "Localidad";
+            this.cmnLocalidad.Name = "cmnLocalidad";
+            this.cmnLocalidad.ReadOnly = true;
+            // 
+            // cmnProvincia
+            // 
+            this.cmnProvincia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnProvincia.HeaderText = "Provincia";
+            this.cmnProvincia.Name = "cmnProvincia";
+            this.cmnProvincia.ReadOnly = true;
+            // 
+            // cmnActivo
+            // 
+            this.cmnActivo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnActivo.HeaderText = "Activo";
+            this.cmnActivo.Name = "cmnActivo";
+            this.cmnActivo.ReadOnly = true;
+            // 
+            // cmnSancionado
+            // 
+            this.cmnSancionado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnSancionado.HeaderText = "Sancionado";
+            this.cmnSancionado.Name = "cmnSancionado";
+            this.cmnSancionado.ReadOnly = true;
+            // 
+            // frmSocios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 461);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.tsLocalidades);
+            this.Controls.Add(this.tsbSocios);
             this.MaximumSize = new System.Drawing.Size(820, 500);
             this.MinimumSize = new System.Drawing.Size(820, 500);
-            this.Name = "frmLocalidades";
-            this.Text = "frmLocalidades";
-            this.Load += new System.EventHandler(this.frmLocalidades_Load);
+            this.Name = "frmSocios";
+            this.Text = "frmSocios";
+            this.Load += new System.EventHandler(this.frmSocios_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
-            this.tsLocalidades.ResumeLayout(false);
-            this.tsLocalidades.PerformLayout();
+            this.tsbSocios.ResumeLayout(false);
+            this.tsbSocios.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,13 +212,18 @@ namespace VideoClubEF2022.Windows
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStrip tsLocalidades;
+        private System.Windows.Forms.DataGridView dgvDatos;
+        private System.Windows.Forms.ToolStrip tsbSocios;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbEditar;
         private System.Windows.Forms.ToolStripButton tsbBorrar;
         private System.Windows.Forms.ToolStripButton tsbCerrar;
-        private System.Windows.Forms.DataGridView dgvDatos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnLocalidades;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnProvincias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnDireccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnLocalidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnProvincia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnActivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnSancionado;
     }
 }

@@ -100,6 +100,7 @@ namespace VideoClubEF2022.Windows
             this.SociosButton.Text = "Socios";
             this.SociosButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.SociosButton.UseVisualStyleBackColor = true;
+            this.SociosButton.Click += new System.EventHandler(this.SociosButton_Click);
             // 
             // LocalidadesButton
             // 

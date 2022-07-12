@@ -9,6 +9,10 @@ namespace VideoClubEF2022.Servicios.Servicios.Facades
 {
     public interface IServicioSocios
     {
-        List<Socio> GetSocios();
+        List<Socio> GetLista(Provincia provincia, Localidad localidad);
+        void Guardar(Socio socio);
+        void Borrar(Socio socio);
+        bool Existe(Socio socio);
+        bool EstaRelacionado(Socio socio);
     }
 }
