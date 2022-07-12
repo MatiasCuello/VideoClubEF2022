@@ -18,7 +18,7 @@ namespace VideoClubEF2022.Datos.Repositorios
         {
             context = new VideoClubEF2022DbContext();
         }
-        public void Borrar(Socio socio)
+        public void Borrar(int socioId)
         {
             throw new NotImplementedException();
         }
@@ -30,7 +30,22 @@ namespace VideoClubEF2022.Datos.Repositorios
 
         public bool Existe(Socio socio)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (socio.SocioId == 0)
+                {
+                    return context.Socios
+                        .Any(s => s.Nombre == socio.Nombre && s.Apellido==socio.Apellido);
+                }
+                return context.Socios
+                    .Any(s => s.Nombre == socio.Nombre &&
+                              s.Apellido==socio.Apellido &&
+                              s.SocioId != socio.SocioId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public List<Socio> GetLista(Localidad localidad=null, Provincia provincia=null,TipoDocumento tipoDocumento=null)
@@ -59,7 +74,43 @@ namespace VideoClubEF2022.Datos.Repositorios
 
         public void Guardar(Socio socio)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (socio.SocioId == 0)
+                {
+                    context.Socios.Add(socio);
+                }
+                else
+                {
+                    var socioEnDB = context.Socios
+                        .SingleOrDefault(s => s.SocioId == socio.SocioId);
+                    if (socioEnDB == null)
+                    {
+                        throw new Exception("Código de socio inexistente...");
+                    }
+
+                    socioEnDB.Nombre = socio.Nombre;
+                    socioEnDB.Apellido = socio.Apellido;
+                    socioEnDB.TipoDocumentoId = socio.TipoDocumentoId;
+                    socioEnDB.NroDocumento = socio.NroDocumento;
+                    socioEnDB.Direccion = socio.Direccion;
+                    socioEnDB.LocalidadId = socio.LocalidadId;
+                    socioEnDB.ProvinciaId = socio.ProvinciaId;
+                    socioEnDB.FechaNacimiento = socioEnDB.FechaNacimiento;
+                    socioEnDB.Activo = socio.Activo;
+                    socioEnDB.Sancionado = socio.Sancionado;
+
+
+                    context.Entry(socioEnDB).State = EntityState.Modified;
+
+                }
+
+                context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
     }
 }

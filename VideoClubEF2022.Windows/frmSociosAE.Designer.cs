@@ -29,6 +29,7 @@ namespace VideoClubEF2022.Windows
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ProvinciasComboBox = new System.Windows.Forms.ComboBox();
             this.lblLocalidad = new System.Windows.Forms.Label();
             this.LocalidadesComboBox = new System.Windows.Forms.ComboBox();
@@ -41,11 +42,10 @@ namespace VideoClubEF2022.Windows
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblSocios = new System.Windows.Forms.Label();
             this.lblTipoDoc = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.TipoDocumentoComboBox = new System.Windows.Forms.ComboBox();
             this.lblDoc = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NroDocumentoTextBox = new System.Windows.Forms.TextBox();
             this.lblFechaNac = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -57,6 +57,8 @@ namespace VideoClubEF2022.Windows
             this.CancelButton = new System.Windows.Forms.Button();
             this.OkButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.FechaNacDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -66,6 +68,7 @@ namespace VideoClubEF2022.Windows
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // ProvinciasComboBox
@@ -179,16 +182,15 @@ namespace VideoClubEF2022.Windows
             this.lblTipoDoc.Size = new System.Drawing.Size(76, 16);
             this.lblTipoDoc.TabIndex = 179;
             this.lblTipoDoc.Text = "Tipo Doc:";
-            this.lblTipoDoc.Click += new System.EventHandler(this.label1_Click);
             // 
-            // comboBox1
+            // TipoDocumentoComboBox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(150, 97);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(250, 21);
-            this.comboBox1.TabIndex = 2;
+            this.TipoDocumentoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TipoDocumentoComboBox.FormattingEnabled = true;
+            this.TipoDocumentoComboBox.Location = new System.Drawing.Point(150, 97);
+            this.TipoDocumentoComboBox.Name = "TipoDocumentoComboBox";
+            this.TipoDocumentoComboBox.Size = new System.Drawing.Size(250, 21);
+            this.TipoDocumentoComboBox.TabIndex = 2;
             // 
             // lblDoc
             // 
@@ -200,13 +202,13 @@ namespace VideoClubEF2022.Windows
             this.lblDoc.TabIndex = 179;
             this.lblDoc.Text = "Nro. Doc.";
             // 
-            // textBox1
+            // NroDocumentoTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(150, 132);
-            this.textBox1.MaxLength = 100;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 20);
-            this.textBox1.TabIndex = 3;
+            this.NroDocumentoTextBox.Location = new System.Drawing.Point(150, 132);
+            this.NroDocumentoTextBox.MaxLength = 100;
+            this.NroDocumentoTextBox.Name = "NroDocumentoTextBox";
+            this.NroDocumentoTextBox.Size = new System.Drawing.Size(250, 20);
+            this.NroDocumentoTextBox.TabIndex = 3;
             // 
             // lblFechaNac
             // 
@@ -217,14 +219,6 @@ namespace VideoClubEF2022.Windows
             this.lblFechaNac.Size = new System.Drawing.Size(91, 16);
             this.lblFechaNac.TabIndex = 178;
             this.lblFechaNac.Text = "Fecha Nac.:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(150, 276);
-            this.textBox2.MaxLength = 100;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(250, 20);
-            this.textBox2.TabIndex = 7;
             // 
             // pictureBox6
             // 
@@ -320,6 +314,7 @@ namespace VideoClubEF2022.Windows
             this.OkButton.Text = "OK";
             this.OkButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
             // pictureBox1
             // 
@@ -330,13 +325,25 @@ namespace VideoClubEF2022.Windows
             this.pictureBox1.TabIndex = 184;
             this.pictureBox1.TabStop = false;
             // 
+            // FechaNacDateTimePicker
+            // 
+            this.FechaNacDateTimePicker.Location = new System.Drawing.Point(150, 273);
+            this.FechaNacDateTimePicker.Name = "FechaNacDateTimePicker";
+            this.FechaNacDateTimePicker.Size = new System.Drawing.Size(250, 20);
+            this.FechaNacDateTimePicker.TabIndex = 192;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmSociosAE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
             this.ControlBox = false;
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.FechaNacDateTimePicker);
+            this.Controls.Add(this.TipoDocumentoComboBox);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox7);
@@ -353,9 +360,8 @@ namespace VideoClubEF2022.Windows
             this.Controls.Add(this.lblLocalidad);
             this.Controls.Add(this.LocalidadesComboBox);
             this.Controls.Add(this.lblProvincia);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.DireccionTextBox);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NroDocumentoTextBox);
             this.Controls.Add(this.ApellidoTextBox);
             this.Controls.Add(this.NombreTextBox);
             this.Controls.Add(this.lblFechaNac);
@@ -377,6 +383,7 @@ namespace VideoClubEF2022.Windows
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,12 +411,13 @@ namespace VideoClubEF2022.Windows
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label lblTipoDoc;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox TipoDocumentoComboBox;
         private System.Windows.Forms.Label lblDoc;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NroDocumentoTextBox;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label lblFechaNac;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.DateTimePicker FechaNacDateTimePicker;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

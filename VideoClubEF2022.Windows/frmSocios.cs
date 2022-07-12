@@ -48,7 +48,71 @@ namespace VideoClubEF2022.Windows
         {
             frmSociosAE frm = new frmSociosAE()
                 {Text = "Nuevo Socio"};
-            frm.ShowDialog(this);
+            DialogResult dr = frm.ShowDialog(this);
+            if (dr == DialogResult.Cancel)
+            {
+                return;
+            }
+
+            try
+            {
+                Socio socio = frm.GetSocio();
+                if (!servicio.Existe(socio))
+                {
+                    servicio.Guardar(socio);
+                    DataGridViewRow r = HelperGrilla.ConstruirFila(dgvDatos);
+                    HelperGrilla.SetearFila(r, socio);
+                    HelperGrilla.AgregarFila(dgvDatos, r);
+                    HelperMensaje.Mensaje(TipoMensaje.OK, "Socio agregado", "Mensaje");
+
+                }
+                else
+                {
+                    HelperMensaje.Mensaje(TipoMensaje.ERROR, "Socio repetido, alta denegada", "Error");
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Mensaje", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void tsbBorrar_Click(object sender, EventArgs e)
+        {
+            if (dgvDatos.SelectedRows.Count == 0)
+            {
+                return;
+            }
+            var r = dgvDatos.SelectedRows[0];
+            Socio socio = (Socio)r.Tag;
+            DialogResult dr = HelperMensaje.Mensaje($"¿Desea borrar el socio {socio.Nombre} {socio.Apellido}?",
+                "Confirmar Eliminacion");
+            if (dr == DialogResult.No)
+            {
+                return;
+            }
+            try
+            {
+                if (!servicio.EstaRelacionado(socio))
+                {
+                    servicio.Borrar(socio);
+                    HelperGrilla.BorrarFila(dgvDatos, r);
+                    HelperMensaje.Mensaje(TipoMensaje.OK, "Socio eliminado",
+                        "Mensaje");
+                }
+                else
+                {
+                    HelperMensaje.Mensaje(TipoMensaje.ERROR, "Socio relacionado\nBaja denegada!",
+                        "Error");
+
+                }
+            }
+            catch (Exception exception)
+            {
+                HelperMensaje.Mensaje(TipoMensaje.Error, exception.Message,
+                    "Error");
+            }
         }
     }
 }

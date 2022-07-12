@@ -32,17 +32,32 @@ namespace VideoClubEF2022.Servicios.Servicios
 
         public void Guardar(Socio socio)
         {
-            throw new NotImplementedException();
+            try
+            {
+                repositorio.Guardar(socio);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
-        public void Borrar(Socio socio)
+        public void Borrar(int socio)
         {
             throw new NotImplementedException();
         }
 
         public bool Existe(Socio socio)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return repositorio.Existe(socio);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public bool EstaRelacionado(Socio socio)

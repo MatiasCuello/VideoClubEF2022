@@ -11,7 +11,7 @@ namespace VideoClubEF2022.Servicios.Servicios.Facades
     {
         List<Socio> GetLista(Localidad localidad, Provincia provincia,TipoDocumento tipoDocumento);
         void Guardar(Socio socio);
-        void Borrar(Socio socio);
+        void Borrar(int socioId);
         bool Existe(Socio socio);
         bool EstaRelacionado(Socio socio);
     }
