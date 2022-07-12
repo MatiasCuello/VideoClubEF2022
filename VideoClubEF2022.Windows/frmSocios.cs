@@ -23,12 +23,13 @@ namespace VideoClubEF2022.Windows
         
         private IServicioSocios servicio;
         private List<Socio> lista;
+
         private void frmSocios_Load(object sender, EventArgs e)
         {
             servicio = new ServicioSocios();
             try
             {
-                lista = servicio.GetLista(null,null);
+                lista = servicio.GetLista(null,null,null);
                 HelperForm.MostrarDatosEnGrilla(dgvDatos, lista);
             }
             catch (Exception exception)
@@ -36,6 +37,18 @@ namespace VideoClubEF2022.Windows
                 Console.WriteLine(exception);
                 throw;
             }
+        }
+
+        private void tsbCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void tsbNuevo_Click(object sender, EventArgs e)
+        {
+            frmSociosAE frm = new frmSociosAE()
+                {Text = "Nuevo Socio"};
+            frm.ShowDialog(this);
         }
     }
 }

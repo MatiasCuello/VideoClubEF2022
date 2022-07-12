@@ -9,7 +9,7 @@ namespace VideoClubEF2022.Datos.Repositorios.Facades
 {
     public interface IRepositorioCalificaciones
     {
-        List<Calificacion> GetCalificacion();
+        List<Calificacion> GetLista();
         void Guardar(Calificacion calificacion);
         void Borrar(int calificacionId);
         bool Existe(Calificacion calificacion);

@@ -18,7 +18,7 @@ namespace VideoClubEF2022.Datos.Repositorios
         {
             context = new VideoClubEF2022DbContext();
         }
-        public List<Estado> GetEstado()
+        public List<Estado> GetLista()
         {
             try
             {

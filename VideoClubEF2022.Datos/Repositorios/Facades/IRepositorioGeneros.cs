@@ -9,7 +9,7 @@ namespace VideoClubEF2022.Datos.Repositorios.Facades
 {
     public interface IRepositorioGeneros
     {
-        List<Genero> GetGenero();
+        List<Genero> GetLista();
         void Guardar(Genero genero);
         void Borrar(int generoId);
         bool Existe(Genero genero);

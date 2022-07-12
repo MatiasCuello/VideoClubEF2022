@@ -56,11 +56,11 @@ namespace VideoClubEF2022.Servicios.Servicios
             }
         }
 
-        public List<Calificacion> GetCalificacion()
+        public List<Calificacion> GetLista()
         {
             try
             {
-                return repositorio.GetCalificacion();
+                return repositorio.GetLista();
             }
             catch (Exception e)
             {

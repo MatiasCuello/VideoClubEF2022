@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,25 +33,24 @@ namespace VideoClubEF2022.Datos.Repositorios
             throw new NotImplementedException();
         }
 
-        public List<Socio> GetLista(Provincia provincia=null, Localidad localidad=null)
+        public List<Socio> GetLista
+            (Localidad localidad=null,Provincia provincia=null,TipoDocumento tipoDocumento=null)
         {
             try
             {
-                var queryProvincia = context.Socios
-                    .Include(s=>s.Provincia);
-                var queryLocalidad = context.Socios
-                    .Include(s=>s.Localidad);
-                if (provincia != null)
+                var query = context.Socios
+                        .Include(s => s.Localidad)
+                        .Include(s => s.Provincia)
+                        .Include(s => s.TipoDocumento)
+                    ;
+               if (localidad != null||provincia != null || tipoDocumento != null)
                 {
-                    queryProvincia = queryProvincia.Where(s => s.ProvinciaId == provincia.ProvinciaId);
+                    query = query.Where(s => s.LocalidadId == localidad.LocalidadId );
+                    query = query.Where(s => s.ProvinciaId == provincia.ProvinciaId);
+                    query = query.Where(s => s.TipoDocuementoId == tipoDocumento.TipoDocumentoId);
                 }
-                if (localidad != null)
-                {
-                    queryLocalidad = queryLocalidad.Where(s => s.LocalidadId == localidad.LocalidadId);
-                }
-                return queryProvincia
-                    .AsNoTracking()
-                    .ToList();
+                return query.AsNoTracking().ToList();
+                
             }
             catch (Exception e)
             {

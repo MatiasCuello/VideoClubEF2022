@@ -67,7 +67,7 @@ namespace VideoClubEF2022.Datos.Repositorios
             }
         }
 
-        public List<Soporte> GetSoporte()
+        public List<Soporte> GetLista()
         {
             try
             {

@@ -19,11 +19,11 @@ namespace VideoClubEF2022.Servicios.Servicios
             repositorio = new RepositorioEstados();
         }
 
-        public List<Estado> GetEstado()
+        public List<Estado> GetLista()
         {
             try
             {
-                return repositorio.GetEstado();
+                return repositorio.GetLista();
             }
             catch (Exception e)
             {

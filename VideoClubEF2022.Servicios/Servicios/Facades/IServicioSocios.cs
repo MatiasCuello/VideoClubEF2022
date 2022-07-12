@@ -9,7 +9,7 @@ namespace VideoClubEF2022.Servicios.Servicios.Facades
 {
     public interface IServicioSocios
     {
-        List<Socio> GetLista(Provincia provincia, Localidad localidad);
+        List<Socio> GetLista(Localidad localidad, Provincia provincia,TipoDocumento tipoDocumento);
         void Guardar(Socio socio);
         void Borrar(Socio socio);
         bool Existe(Socio socio);

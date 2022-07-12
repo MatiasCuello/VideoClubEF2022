@@ -9,7 +9,7 @@ namespace VideoClubEF2022.Servicios.Servicios.Facades
 {
     public interface IServicioEstados
     {
-        List<Estado> GetEstado();
+        List<Estado> GetLista();
         void Guardar(Estado estado);
         void Borrar(int estadoId);
         bool Existe(Estado estado);

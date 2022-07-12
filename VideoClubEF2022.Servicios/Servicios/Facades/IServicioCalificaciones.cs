@@ -9,7 +9,7 @@ namespace VideoClubEF2022.Servicios.Servicios.Facades
 {
     public interface IServicioCalificaciones
     {
-        List<Calificacion> GetCalificacion();
+        List<Calificacion> GetLista();
         void Guardar(Calificacion calificacion);
         void Borrar(int calificacionId);
         bool Existe(Calificacion calificacion);

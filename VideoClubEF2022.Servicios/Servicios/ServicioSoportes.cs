@@ -18,11 +18,11 @@ namespace VideoClubEF2022.Servicios.Servicios
         {
             repositorio = new RepositorioSoportes();
         }
-        public List<Soporte> GetSoporte()
+        public List<Soporte> GetLista()
         {
             try
             {
-                return repositorio.GetSoporte();
+                return repositorio.GetLista();
             }
             catch (Exception e)
             {

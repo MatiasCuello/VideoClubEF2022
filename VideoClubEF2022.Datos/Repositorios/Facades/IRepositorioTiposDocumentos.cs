@@ -9,7 +9,7 @@ namespace VideoClubEF2022.Datos.Repositorios.Facades
 {
     public interface IRepositorioTiposDocumentos
     {
-        List<TipoDocumento> GetTipoDocumento();
+        List<TipoDocumento> GetLista();
 
     }
 }

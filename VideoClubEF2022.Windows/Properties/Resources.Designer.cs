@@ -93,6 +93,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _18_plus_30px3 {
+            get {
+                object obj = ResourceManager.GetObject("18_plus_30px3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Actualizar {
             get {
                 object obj = ResourceManager.GetObject("Actualizar", resourceCulture);
@@ -123,9 +133,29 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Actualizar3 {
+            get {
+                object obj = ResourceManager.GetObject("Actualizar3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap alphabetical_sorting_2_30px {
             get {
                 object obj = ResourceManager.GetObject("alphabetical_sorting_2_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alphabetical_sorting_2_30px1 {
+            get {
+                object obj = ResourceManager.GetObject("alphabetical_sorting_2_30px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +183,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alphabetical_sorting_30px2 {
+            get {
+                object obj = ResourceManager.GetObject("alphabetical_sorting_30px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap alphabetical_sorting_50px {
             get {
                 object obj = ResourceManager.GetObject("alphabetical_sorting_50px", resourceCulture);
@@ -166,6 +206,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap alphabetical_sorting_50px1 {
             get {
                 object obj = ResourceManager.GetObject("alphabetical_sorting_50px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alphabetical_sorting_50px2 {
+            get {
+                object obj = ResourceManager.GetObject("alphabetical_sorting_50px2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,6 +253,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap argentina_map_30px3 {
+            get {
+                object obj = ResourceManager.GetObject("argentina_map_30px3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap argentina_map_50px {
             get {
                 object obj = ResourceManager.GetObject("argentina_map_50px", resourceCulture);
@@ -226,6 +286,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap argentina_map_50px2 {
             get {
                 object obj = ResourceManager.GetObject("argentina_map_50px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap argentina_map_50px3 {
+            get {
+                object obj = ResourceManager.GetObject("argentina_map_50px3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,6 +333,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Borrar3 {
+            get {
+                object obj = ResourceManager.GetObject("Borrar3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap burn_cd_30px {
             get {
                 object obj = ResourceManager.GetObject("burn_cd_30px", resourceCulture);
@@ -286,6 +366,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap burn_cd_30px2 {
             get {
                 object obj = ResourceManager.GetObject("burn_cd_30px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap burn_cd_30px3 {
+            get {
+                object obj = ResourceManager.GetObject("burn_cd_30px3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,6 +413,26 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Buscar3 {
+            get {
+                object obj = ResourceManager.GetObject("Buscar3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendar_26_30px {
+            get {
+                object obj = ResourceManager.GetObject("calendar_26_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cancelar {
             get {
                 object obj = ResourceManager.GetObject("Cancelar", resourceCulture);
@@ -346,6 +456,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap Cancelar2 {
             get {
                 object obj = ResourceManager.GetObject("Cancelar2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cancelar3 {
+            get {
+                object obj = ResourceManager.GetObject("Cancelar3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -383,6 +503,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cd_30px3 {
+            get {
+                object obj = ResourceManager.GetObject("cd_30px3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cd_50px {
             get {
                 object obj = ResourceManager.GetObject("cd_50px", resourceCulture);
@@ -406,6 +536,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap cd_50px2 {
             get {
                 object obj = ResourceManager.GetObject("cd_50px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cd_50px3 {
+            get {
+                object obj = ResourceManager.GetObject("cd_50px3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -443,6 +583,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cinema_30px3 {
+            get {
+                object obj = ResourceManager.GetObject("cinema_30px3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clapperboard_50px {
             get {
                 object obj = ResourceManager.GetObject("clapperboard_50px", resourceCulture);
@@ -466,6 +616,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap clapperboard_50px2 {
             get {
                 object obj = ResourceManager.GetObject("clapperboard_50px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clapperboard_50px3 {
+            get {
+                object obj = ResourceManager.GetObject("clapperboard_50px3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -503,6 +663,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dvd_logo_30px3 {
+            get {
+                object obj = ResourceManager.GetObject("dvd_logo_30px3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dvd_logo_50px {
             get {
                 object obj = ResourceManager.GetObject("dvd_logo_50px", resourceCulture);
@@ -526,6 +696,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap dvd_logo_50px2 {
             get {
                 object obj = ResourceManager.GetObject("dvd_logo_50px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dvd_logo_50px3 {
+            get {
+                object obj = ResourceManager.GetObject("dvd_logo_50px3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -563,6 +743,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Editar3 {
+            get {
+                object obj = ResourceManager.GetObject("Editar3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap filter_30px {
             get {
                 object obj = ResourceManager.GetObject("filter_30px", resourceCulture);
@@ -593,6 +783,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap filter_30px3 {
+            get {
+                object obj = ResourceManager.GetObject("filter_30px3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap filter_and_sort_50px {
             get {
                 object obj = ResourceManager.GetObject("filter_and_sort_50px", resourceCulture);
@@ -606,6 +806,36 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap filter_and_sort_50px1 {
             get {
                 object obj = ResourceManager.GetObject("filter_and_sort_50px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap filter_and_sort_50px2 {
+            get {
+                object obj = ResourceManager.GetObject("filter_and_sort_50px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap house_30px {
+            get {
+                object obj = ResourceManager.GetObject("house_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap house_30px1 {
+            get {
+                object obj = ResourceManager.GetObject("house_30px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -643,6 +873,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap identification_documents_30px3 {
+            get {
+                object obj = ResourceManager.GetObject("identification_documents_30px3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imprimir {
             get {
                 object obj = ResourceManager.GetObject("imprimir", resourceCulture);
@@ -666,6 +906,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap imprimir2 {
             get {
                 object obj = ResourceManager.GetObject("imprimir2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imprimir3 {
+            get {
+                object obj = ResourceManager.GetObject("imprimir3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -703,6 +953,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap location_30px3 {
+            get {
+                object obj = ResourceManager.GetObject("location_30px3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap location_50px {
             get {
                 object obj = ResourceManager.GetObject("location_50px", resourceCulture);
@@ -726,6 +986,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap location_50px2 {
             get {
                 object obj = ResourceManager.GetObject("location_50px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap location_50px3 {
+            get {
+                object obj = ResourceManager.GetObject("location_50px3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -763,6 +1033,26 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap meeting_room_30px3 {
+            get {
+                object obj = ResourceManager.GetObject("meeting_room_30px3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap meeting_room_70px {
+            get {
+                object obj = ResourceManager.GetObject("meeting_room_70px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap movie_30px {
             get {
                 object obj = ResourceManager.GetObject("movie_30px", resourceCulture);
@@ -786,6 +1076,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap movie_30px2 {
             get {
                 object obj = ResourceManager.GetObject("movie_30px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap movie_30px3 {
+            get {
+                object obj = ResourceManager.GetObject("movie_30px3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -823,6 +1123,26 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap movie_50px3 {
+            get {
+                object obj = ResourceManager.GetObject("movie_50px3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap name_30px {
+            get {
+                object obj = ResourceManager.GetObject("name_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Nuevo {
             get {
                 object obj = ResourceManager.GetObject("Nuevo", resourceCulture);
@@ -846,6 +1166,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap Nuevo2 {
             get {
                 object obj = ResourceManager.GetObject("Nuevo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Nuevo3 {
+            get {
+                object obj = ResourceManager.GetObject("Nuevo3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -883,6 +1213,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OK3 {
+            get {
+                object obj = ResourceManager.GetObject("OK3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rating_30px {
             get {
                 object obj = ResourceManager.GetObject("rating_30px", resourceCulture);
@@ -906,6 +1246,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap rating_30px2 {
             get {
                 object obj = ResourceManager.GetObject("rating_30px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rating_30px3 {
+            get {
+                object obj = ResourceManager.GetObject("rating_30px3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -943,6 +1293,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rating_50px3 {
+            get {
+                object obj = ResourceManager.GetObject("rating_50px3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reversed_numerical_sorting_30px {
             get {
                 object obj = ResourceManager.GetObject("reversed_numerical_sorting_30px", resourceCulture);
@@ -963,6 +1323,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap reversed_numerical_sorting_30px2 {
+            get {
+                object obj = ResourceManager.GetObject("reversed_numerical_sorting_30px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reversed_numerical_sorting_50px {
             get {
                 object obj = ResourceManager.GetObject("reversed_numerical_sorting_50px", resourceCulture);
@@ -976,6 +1346,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap reversed_numerical_sorting_50px1 {
             get {
                 object obj = ResourceManager.GetObject("reversed_numerical_sorting_50px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reversed_numerical_sorting_50px2 {
+            get {
+                object obj = ResourceManager.GetObject("reversed_numerical_sorting_50px2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1013,6 +1393,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Salir3 {
+            get {
+                object obj = ResourceManager.GetObject("Salir3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap supplier_30px {
             get {
                 object obj = ResourceManager.GetObject("supplier_30px", resourceCulture);
@@ -1036,6 +1426,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap supplier_30px2 {
             get {
                 object obj = ResourceManager.GetObject("supplier_30px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap supplier_30px3 {
+            get {
+                object obj = ResourceManager.GetObject("supplier_30px3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1073,6 +1473,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap supplier_50px3 {
+            get {
+                object obj = ResourceManager.GetObject("supplier_50px3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap theatre_mask_30px {
             get {
                 object obj = ResourceManager.GetObject("theatre_mask_30px", resourceCulture);
@@ -1096,6 +1506,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap theatre_mask_30px2 {
             get {
                 object obj = ResourceManager.GetObject("theatre_mask_30px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap theatre_mask_30px3 {
+            get {
+                object obj = ResourceManager.GetObject("theatre_mask_30px3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1133,6 +1553,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap timecode_50px3 {
+            get {
+                object obj = ResourceManager.GetObject("timecode_50px3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap workers_30px {
             get {
                 object obj = ResourceManager.GetObject("workers_30px", resourceCulture);
@@ -1156,6 +1586,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap workers_30px2 {
             get {
                 object obj = ResourceManager.GetObject("workers_30px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap workers_30px3 {
+            get {
+                object obj = ResourceManager.GetObject("workers_30px3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

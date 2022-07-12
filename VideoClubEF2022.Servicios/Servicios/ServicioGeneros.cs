@@ -5,6 +5,7 @@ using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using VideoClubEF2022.Datos;
+using VideoClubEF2022.Datos.Repositorios;
 using VideoClubEF2022.Datos.Repositorios.Facades;
 using VideoClubEF2022.Entidades;
 using VideoClubEF2022.Servicios.Servicios.Facades;
@@ -19,11 +20,11 @@ namespace VideoClubEF2022.Servicios
         {
             repositorio = new RepositorioGeneros();
         }
-        public List<Genero> GetGenero()
+        public List<Genero> GetLista()
         {
             try
             {
-                return repositorio.GetGenero();
+                return repositorio.GetLista();
             }
             catch (Exception e)
             {

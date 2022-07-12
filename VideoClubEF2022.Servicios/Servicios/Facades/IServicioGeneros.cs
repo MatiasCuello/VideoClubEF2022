@@ -9,7 +9,7 @@ namespace VideoClubEF2022.Servicios.Servicios.Facades
 {
     public interface IServicioGeneros
     {
-        List<Genero> GetGenero();
+        List<Genero> GetLista();
         void Guardar(Genero genero);
         void Borrar(int generoId);
         bool Existe(Genero genero);

@@ -4,9 +4,10 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VideoClubEF2022.Datos.Repositorios.Facades;
 using VideoClubEF2022.Entidades;
 
-namespace VideoClubEF2022.Datos.Repositorios.Facades
+namespace VideoClubEF2022.Datos.Repositorios
 {
     public class RepositorioGeneros:IRepositorioGeneros
     {
@@ -16,7 +17,7 @@ namespace VideoClubEF2022.Datos.Repositorios.Facades
             context = new VideoClubEF2022DbContext();
         }
 
-        public List<Genero> GetGenero()
+        public List<Genero> GetLista()
         {
             try
             {
@@ -108,6 +109,6 @@ namespace VideoClubEF2022.Datos.Repositorios.Facades
             }
         }
 
-    
+        
     }
 }

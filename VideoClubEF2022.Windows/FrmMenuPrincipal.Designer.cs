@@ -42,6 +42,7 @@ namespace VideoClubEF2022.Windows
             this.SalirButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TipoDocumentoButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,6 +195,18 @@ namespace VideoClubEF2022.Windows
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
+            // TipoDocumentoButton
+            // 
+            this.TipoDocumentoButton.Image = global::VideoClubEF2022.Windows.Properties.Resources.identification_documents_30px;
+            this.TipoDocumentoButton.Location = new System.Drawing.Point(347, 180);
+            this.TipoDocumentoButton.Name = "TipoDocumentoButton";
+            this.TipoDocumentoButton.Size = new System.Drawing.Size(122, 61);
+            this.TipoDocumentoButton.TabIndex = 23;
+            this.TipoDocumentoButton.Text = "Tipos de Documentos";
+            this.TipoDocumentoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.TipoDocumentoButton.UseVisualStyleBackColor = true;
+            this.TipoDocumentoButton.Click += new System.EventHandler(this.TipoDocumentoButton_Click);
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,6 +220,7 @@ namespace VideoClubEF2022.Windows
             this.Controls.Add(this.ProveedoresButton);
             this.Controls.Add(this.EmpleadosButton);
             this.Controls.Add(this.PeliculasButton);
+            this.Controls.Add(this.TipoDocumentoButton);
             this.Controls.Add(this.SociosButton);
             this.Controls.Add(this.LocalidadesButton);
             this.Controls.Add(this.CalificacionesButton);
@@ -241,5 +255,6 @@ namespace VideoClubEF2022.Windows
         private System.Windows.Forms.Button SalirButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button TipoDocumentoButton;
     }
 }

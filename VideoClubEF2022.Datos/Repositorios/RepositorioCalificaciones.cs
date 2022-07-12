@@ -18,7 +18,7 @@ namespace VideoClubEF2022.Datos.Repositorios
             context = new VideoClubEF2022DbContext();
         }
 
-        public List<Calificacion> GetCalificacion()
+        public List<Calificacion> GetLista()
         {
             try
             {

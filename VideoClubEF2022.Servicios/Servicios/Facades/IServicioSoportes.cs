@@ -9,7 +9,7 @@ namespace VideoClubEF2022.Servicios.Servicios.Facades
 {
     public interface IServicioSoportes
     {
-        List<Soporte> GetSoporte();
+        List<Soporte> GetLista();
         void Guardar(Soporte soporte);
         void Borrar(int soporteId);
         bool Existe(Soporte soporte);

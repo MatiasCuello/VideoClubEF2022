@@ -34,7 +34,7 @@ namespace VideoClubEF2022.Windows
             servicio = new ServicioSoportes();
             try
             {
-                lista = servicio.GetSoporte();
+                lista = servicio.GetLista();
                 HelperForm.MostrarDatosEnGrilla(dgvDatos, lista);
             }
             catch (Exception exception)

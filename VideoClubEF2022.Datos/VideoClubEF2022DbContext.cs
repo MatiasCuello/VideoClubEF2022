@@ -34,7 +34,7 @@ namespace VideoClubEF2022.Datos
         public DbSet<Provincia> Provincias { get; set; }
         public DbSet<Socio> Socios { get; set; }
         public DbSet<Soporte> Soportes { get; set; }
-        //public DbSet<TipoDocumento> TipoDocumentos { get; set; }
+        public DbSet<TipoDocumento> TipoDocumentos { get; set; }
 
 
     }

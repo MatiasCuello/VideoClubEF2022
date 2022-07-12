@@ -152,7 +152,7 @@ namespace VideoClubEF2022.Windows
             servicio = new ServicioEstados();
             try
             {
-                lista = servicio.GetEstado();
+                lista = servicio.GetLista();
                 HelperForm.MostrarDatosEnGrilla(dgvDatos, lista);
             }
             catch (Exception exception)

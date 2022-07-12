@@ -9,7 +9,7 @@ namespace VideoClubEF2022.Datos.Repositorios.Facades
 {
     public interface IRepositorioEstados
     {
-        List<Estado> GetEstado();
+        List<Estado> GetLista();
         void Guardar(Estado estado);
         void Borrar(int estadoId);
         bool Existe(Estado estado);

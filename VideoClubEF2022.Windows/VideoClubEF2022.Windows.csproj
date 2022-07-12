@@ -134,6 +134,12 @@
     <Compile Include="frmSocios.Designer.cs">
       <DependentUpon>frmSocios.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSociosAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSociosAE.Designer.cs">
+      <DependentUpon>frmSociosAE.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSoportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,12 @@
     </Compile>
     <Compile Include="frmSoportesAE.Designer.cs">
       <DependentUpon>frmSoportesAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTiposDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTiposDocumentos.Designer.cs">
+      <DependentUpon>frmTiposDocumentos.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HelperCombo.cs" />
     <Compile Include="Helpers\HelperForm.cs" />
@@ -192,11 +204,17 @@
     <EmbeddedResource Include="frmSocios.resx">
       <DependentUpon>frmSocios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSociosAE.resx">
+      <DependentUpon>frmSociosAE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSoportes.resx">
       <DependentUpon>frmSoportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSoportesAE.resx">
       <DependentUpon>frmSoportesAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTiposDocumentos.resx">
+      <DependentUpon>frmTiposDocumentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -564,6 +582,138 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\workers_30px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18_plus_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actualizar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alphabetical_sorting_2_30px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alphabetical_sorting_30px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alphabetical_sorting_50px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\argentina_map_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\argentina_map_50px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Borrar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\burn_cd_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd_50px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cinema_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clapperboard_50px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvd_logo_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvd_logo_50px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter_and_sort_50px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\identification_documents_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location_50px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meeting_room_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie_50px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating_50px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reversed_numerical_sorting_30px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reversed_numerical_sorting_50px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salir3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier_50px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theatre_mask_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timecode_50px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workers_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house_30px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meeting_room_70px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_26_30px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

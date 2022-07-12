@@ -70,5 +70,12 @@ namespace VideoClubEF2022.Windows
                 { Text = "Socios" };
             frm.ShowDialog(this);
         }
+
+        private void TipoDocumentoButton_Click(object sender, EventArgs e)
+        {
+            frmTiposDocumentos frm = new frmTiposDocumentos()
+                { Text = "Tipos de Documentos" };
+            frm.ShowDialog(this);
+        }
     }
 }

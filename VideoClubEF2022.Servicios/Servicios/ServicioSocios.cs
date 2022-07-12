@@ -17,11 +17,11 @@ namespace VideoClubEF2022.Servicios.Servicios
         {
             repositorio = new RepositorioSocios();
         }
-        public List<Socio> GetLista(Provincia provincia, Localidad localidad)
+        public List<Socio> GetLista(Localidad localidad,Provincia provincia,TipoDocumento tipoDocumento)
         {
             try
             {
-                return repositorio.GetLista(provincia, localidad);
+                return repositorio.GetLista(localidad,provincia,tipoDocumento);
             }
             catch (Exception e)
             {

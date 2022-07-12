@@ -31,18 +31,21 @@ namespace VideoClubEF2022.Windows
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.cmnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnTipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnProvincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnFechaNac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnSancionado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tsbSocios = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbBorrar = new System.Windows.Forms.ToolStripButton();
             this.tsbCerrar = new System.Windows.Forms.ToolStripButton();
-            this.cmnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnProvincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnSancionado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.tsbSocios.SuspendLayout();
@@ -68,9 +71,12 @@ namespace VideoClubEF2022.Windows
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cmnNombre,
             this.cmnApellido,
+            this.cmnTipoDoc,
+            this.cmnDocumento,
             this.cmnDireccion,
             this.cmnLocalidad,
             this.cmnProvincia,
+            this.cmnFechaNac,
             this.cmnActivo,
             this.cmnSancionado});
             this.dgvDatos.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -82,6 +88,73 @@ namespace VideoClubEF2022.Windows
             this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDatos.Size = new System.Drawing.Size(804, 407);
             this.dgvDatos.TabIndex = 0;
+            // 
+            // cmnNombre
+            // 
+            this.cmnNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnNombre.HeaderText = "Nombre";
+            this.cmnNombre.Name = "cmnNombre";
+            this.cmnNombre.ReadOnly = true;
+            // 
+            // cmnApellido
+            // 
+            this.cmnApellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnApellido.HeaderText = "Apellido";
+            this.cmnApellido.Name = "cmnApellido";
+            this.cmnApellido.ReadOnly = true;
+            // 
+            // cmnTipoDoc
+            // 
+            this.cmnTipoDoc.HeaderText = "Tipo Doc.";
+            this.cmnTipoDoc.Name = "cmnTipoDoc";
+            this.cmnTipoDoc.ReadOnly = true;
+            // 
+            // cmnDocumento
+            // 
+            this.cmnDocumento.HeaderText = "Documento";
+            this.cmnDocumento.Name = "cmnDocumento";
+            this.cmnDocumento.ReadOnly = true;
+            // 
+            // cmnDireccion
+            // 
+            this.cmnDireccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnDireccion.HeaderText = "Direccion";
+            this.cmnDireccion.Name = "cmnDireccion";
+            this.cmnDireccion.ReadOnly = true;
+            // 
+            // cmnLocalidad
+            // 
+            this.cmnLocalidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnLocalidad.HeaderText = "Localidad";
+            this.cmnLocalidad.Name = "cmnLocalidad";
+            this.cmnLocalidad.ReadOnly = true;
+            // 
+            // cmnProvincia
+            // 
+            this.cmnProvincia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnProvincia.HeaderText = "Provincia";
+            this.cmnProvincia.Name = "cmnProvincia";
+            this.cmnProvincia.ReadOnly = true;
+            // 
+            // cmnFechaNac
+            // 
+            this.cmnFechaNac.HeaderText = "Fecha Nac.";
+            this.cmnFechaNac.Name = "cmnFechaNac";
+            this.cmnFechaNac.ReadOnly = true;
+            // 
+            // cmnActivo
+            // 
+            this.cmnActivo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnActivo.HeaderText = "Activo";
+            this.cmnActivo.Name = "cmnActivo";
+            this.cmnActivo.ReadOnly = true;
+            // 
+            // cmnSancionado
+            // 
+            this.cmnSancionado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnSancionado.HeaderText = "Sancionado";
+            this.cmnSancionado.Name = "cmnSancionado";
+            this.cmnSancionado.ReadOnly = true;
             // 
             // tsbSocios
             // 
@@ -106,6 +179,7 @@ namespace VideoClubEF2022.Windows
             this.tsbNuevo.Size = new System.Drawing.Size(46, 51);
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbEditar
             // 
@@ -137,55 +211,7 @@ namespace VideoClubEF2022.Windows
             this.tsbCerrar.Size = new System.Drawing.Size(43, 51);
             this.tsbCerrar.Text = "Cerrar";
             this.tsbCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // cmnNombre
-            // 
-            this.cmnNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnNombre.HeaderText = "Nombre";
-            this.cmnNombre.Name = "cmnNombre";
-            this.cmnNombre.ReadOnly = true;
-            // 
-            // cmnApellido
-            // 
-            this.cmnApellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnApellido.HeaderText = "Apellido";
-            this.cmnApellido.Name = "cmnApellido";
-            this.cmnApellido.ReadOnly = true;
-            // 
-            // cmnDireccion
-            // 
-            this.cmnDireccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnDireccion.HeaderText = "Direccion";
-            this.cmnDireccion.Name = "cmnDireccion";
-            this.cmnDireccion.ReadOnly = true;
-            // 
-            // cmnLocalidad
-            // 
-            this.cmnLocalidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnLocalidad.HeaderText = "Localidad";
-            this.cmnLocalidad.Name = "cmnLocalidad";
-            this.cmnLocalidad.ReadOnly = true;
-            // 
-            // cmnProvincia
-            // 
-            this.cmnProvincia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnProvincia.HeaderText = "Provincia";
-            this.cmnProvincia.Name = "cmnProvincia";
-            this.cmnProvincia.ReadOnly = true;
-            // 
-            // cmnActivo
-            // 
-            this.cmnActivo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnActivo.HeaderText = "Activo";
-            this.cmnActivo.Name = "cmnActivo";
-            this.cmnActivo.ReadOnly = true;
-            // 
-            // cmnSancionado
-            // 
-            this.cmnSancionado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnSancionado.HeaderText = "Sancionado";
-            this.cmnSancionado.Name = "cmnSancionado";
-            this.cmnSancionado.ReadOnly = true;
+            this.tsbCerrar.Click += new System.EventHandler(this.tsbCerrar_Click);
             // 
             // frmSocios
             // 
@@ -220,9 +246,12 @@ namespace VideoClubEF2022.Windows
         private System.Windows.Forms.ToolStripButton tsbCerrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnTipoDoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnDocumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnDireccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnLocalidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnProvincia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnFechaNac;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnActivo;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnSancionado;
     }
