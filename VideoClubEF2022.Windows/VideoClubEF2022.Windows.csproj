@@ -56,12 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmBuscarPorProvincia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBuscarPorProvincia.Designer.cs">
-      <DependentUpon>frmBuscarPorProvincia.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmCalificaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +67,18 @@
     </Compile>
     <Compile Include="frmCalificacionesAE.Designer.cs">
       <DependentUpon>frmCalificacionesAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleados.Designer.cs">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleadosAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleadosAE.Designer.cs">
+      <DependentUpon>frmEmpleadosAE.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEstados.cs">
       <SubType>Form</SubType>
@@ -121,6 +127,12 @@
     </Compile>
     <Compile Include="frmPeliculas.Designer.cs">
       <DependentUpon>frmPeliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProveedores.Designer.cs">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProvincias.cs">
       <SubType>Form</SubType>
@@ -171,14 +183,17 @@
     <Compile Include="Helpers\TipoMensaje.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmBuscarPorProvincia.resx">
-      <DependentUpon>frmBuscarPorProvincia.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmCalificaciones.resx">
       <DependentUpon>frmCalificaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCalificacionesAE.resx">
       <DependentUpon>frmCalificacionesAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleados.resx">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleadosAE.resx">
+      <DependentUpon>frmEmpleadosAE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEstados.resx">
       <DependentUpon>frmEstados.cs</DependentUpon>
@@ -203,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPeliculas.resx">
       <DependentUpon>frmPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProveedores.resx">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProvincias.resx">
       <DependentUpon>frmProvincias.cs</DependentUpon>
@@ -723,6 +741,141 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\calendar_26_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18_plus_30px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actualizar4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alphabetical_sorting_2_30px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alphabetical_sorting_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alphabetical_sorting_50px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\argentina_map_30px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\argentina_map_50px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Borrar4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\burn_cd_30px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_26_30px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd_30px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd_50px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cinema_30px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clapperboard_50px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvd_logo_30px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvd_logo_50px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter_30px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter_and_sort_50px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house_30px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\identification_documents_30px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location_30px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location_50px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meeting_room_30px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meeting_room_70px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie_30px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie_50px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name_30px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating_30px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating_50px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reversed_numerical_sorting_30px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reversed_numerical_sorting_50px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salir4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier_30px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier_50px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theatre_mask_30px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timecode_50px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workers_30px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workers_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workers_70px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

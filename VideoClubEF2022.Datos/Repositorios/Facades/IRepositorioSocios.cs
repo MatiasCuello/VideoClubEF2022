@@ -7,13 +7,13 @@ using VideoClubEF2022.Entidades;
 
 namespace VideoClubEF2022.Datos.Repositorios.Facades
 {
-    interface IRepositorioSocios
+    public interface IRepositorioSocios
     {
         List<Socio> GetLista(Localidad localidad, Provincia provincia,TipoDocumento tipoDocumento);
         void Guardar(Socio socio);
         void Borrar(int socioId);
         bool Existe(Socio socio);
-        bool EstaRelacionado(Socio socio);
+        
 
     }
 }

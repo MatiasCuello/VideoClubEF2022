@@ -9,6 +9,10 @@ namespace VideoClubEF2022.Servicios.Servicios.Facades
 {
     public interface IServicioEmpleados
     {
-        List<Empleado> GetEmpleados();
+        List<Empleado> GetLista(Localidad localidad, Provincia provincia, TipoDocumento tipoDocumento);
+        void Guardar(Empleado empleado);
+        void Borrar(int empleadoId);
+        bool Existe(Empleado empleado);
+        bool EstaRelacionado(Empleado empleado);
     }
 }

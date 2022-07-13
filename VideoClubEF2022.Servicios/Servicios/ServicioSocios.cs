@@ -43,9 +43,17 @@ namespace VideoClubEF2022.Servicios.Servicios
             }
         }
 
-        public void Borrar(int socio)
+        public void Borrar(int socioid)
         {
-            throw new NotImplementedException();
+            try
+            {
+                repositorio.Borrar(socioid);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         public bool Existe(Socio socio)
@@ -60,9 +68,5 @@ namespace VideoClubEF2022.Servicios.Servicios
             }
         }
 
-        public bool EstaRelacionado(Socio socio)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

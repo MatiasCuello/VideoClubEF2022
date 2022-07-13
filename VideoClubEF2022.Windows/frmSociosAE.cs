@@ -44,6 +44,7 @@ namespace VideoClubEF2022.Windows
 
             }
         }
+    
 
 
         private void CancelButton_Click(object sender, EventArgs e)

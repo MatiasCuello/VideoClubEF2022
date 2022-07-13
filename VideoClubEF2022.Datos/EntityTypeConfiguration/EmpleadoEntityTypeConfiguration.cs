@@ -6,13 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using VideoClubEF2022.Entidades;
 
-namespace VideoClubEF2022.Datos.EntityTypeConfigurations
+namespace VideoClubEF2022.Datos.EntityTypeConfiguration
 {
-    public class EstadosEntityTypeConfigurations : EntityTypeConfiguration<Estado>
+    public class EmpleadoEntityTypeConfiguration:EntityTypeConfiguration<Empleado>
     {
-        public EstadosEntityTypeConfigurations()
+        public EmpleadoEntityTypeConfiguration()
         {
-            ToTable("Estados");
+            ToTable("Empleados");
         }
     }
 }

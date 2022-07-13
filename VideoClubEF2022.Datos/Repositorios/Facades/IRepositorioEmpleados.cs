@@ -9,7 +9,11 @@ namespace VideoClubEF2022.Datos.Repositorios.Facades
 {
     public interface IRepositorioEmpleados
     {
-        List<Empleado> GetLista();
+        List<Empleado> GetLista(Localidad localidad, Provincia provincia, TipoDocumento tipoDocumento);
+        void Guardar(Empleado empleado);
+        void Borrar(int empleadoId);
+        bool Existe(Empleado empleado);
+        bool EstaRelacionado(Empleado empleado);
 
     }
 }

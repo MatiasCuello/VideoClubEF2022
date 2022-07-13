@@ -9,9 +9,10 @@ namespace VideoClubEF2022.Datos.Repositorios.Facades
 {
     public interface IRepositorioProveedores
     {
-        List<Proveedor> GetProveedores();
-        bool Existe(Proveedor proveedor);
+        List<Proveedor> GetLista(Localidad localidad, Provincia provincia);
         void Guardar(Proveedor proveedor);
+        void Borrar(int proveddorId);
+        bool Existe(Proveedor proveedor);
         bool EstaRelacionado(Proveedor proveedor);
     }
 }

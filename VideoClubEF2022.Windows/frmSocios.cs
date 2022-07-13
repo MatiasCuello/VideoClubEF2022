@@ -93,24 +93,16 @@ namespace VideoClubEF2022.Windows
                 return;
             }
             try
-            {
-                if (!servicio.EstaRelacionado(socio))
-                {
-                    servicio.Borrar(socio);
+            {   
+                    servicio.Borrar(socio.SocioId);
                     HelperGrilla.BorrarFila(dgvDatos, r);
                     HelperMensaje.Mensaje(TipoMensaje.OK, "Socio eliminado",
                         "Mensaje");
-                }
-                else
-                {
-                    HelperMensaje.Mensaje(TipoMensaje.ERROR, "Socio relacionado\nBaja denegada!",
-                        "Error");
-
-                }
+             
             }
             catch (Exception exception)
             {
-                HelperMensaje.Mensaje(TipoMensaje.Error, exception.Message,
+                HelperMensaje.Mensaje(TipoMensaje.ERROR, exception.Message,
                     "Error");
             }
         }

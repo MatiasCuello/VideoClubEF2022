@@ -19,6 +19,12 @@ namespace VideoClubEF2022.Entidades
         public bool Activa { get; set; } = true;
         public string Observaciones { get; set; }
         public int SoporteId { get; set; }
+        public int ProveedorId { get; set; }
 
+        public Genero Genero { get; set; }
+        public Estado Estado { get; set; }
+        public Calificacion Calificacion { get; set; }
+        public Soporte Soporte { get; set; }
+        public Proveedor Proveedor { get; set; }
     }
 }

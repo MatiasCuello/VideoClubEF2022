@@ -63,7 +63,8 @@ namespace VideoClubEF2022.Datos.Repositorios
                         .Any(l => l.NombreLocalidad == localidad.NombreLocalidad);
                 }
                 return context.Localidades.Any(l => l.NombreLocalidad == localidad.NombreLocalidad &&
-                                                   l.LocalidadId != localidad.LocalidadId);
+                                                    l.Provincia==localidad.Provincia /*&&*/
+                                                /*   l.LocalidadId != localidad.LocalidadId*/);
             }
             catch (Exception e)
             {

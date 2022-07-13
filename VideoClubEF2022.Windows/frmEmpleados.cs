@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace VideoClubEF2022.Windows
 {
-    public partial class frmBuscarPorProvincia : Form
+    public partial class frmEmpleados : Form
     {
-        public frmBuscarPorProvincia()
+        public frmEmpleados()
         {
             InitializeComponent();
-        }
-
-        private void frmBuscarPorProvincia_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

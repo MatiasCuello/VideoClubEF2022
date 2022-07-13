@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\ServicioEmpleados.cs" />
     <Compile Include="Servicios\ServicioGeneros.cs" />
     <Compile Include="Servicios\Facades\IServicioProvincias.cs" />
     <Compile Include="Servicios\Facades\IServicioPeliculas.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Servicios\ServicioCalificaciones.cs" />
     <Compile Include="Servicios\ServicioEstados.cs" />
     <Compile Include="Servicios\ServicioLocalidades.cs" />
+    <Compile Include="Servicios\ServicioProveedores.cs" />
     <Compile Include="Servicios\ServicioProvincias.cs" />
     <Compile Include="Servicios\ServicioSocios.cs" />
     <Compile Include="Servicios\ServicioSoportes.cs" />

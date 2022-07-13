@@ -20,13 +20,23 @@ namespace VideoClubEF2022.Datos.Repositorios
         }
         public void Borrar(int socioId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var socioEnDb = context.Socios
+                    .SingleOrDefault(s => s.SocioId == socioId);
+                if (socioEnDb == null)
+                {
+                    throw new Exception("Socio no encontrado");
+                }
+                context.Entry(socioEnDb).State = EntityState.Deleted;
+                context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
-        public bool EstaRelacionado(Socio socio)
-        {
-            throw new NotImplementedException();
-        }
 
         public bool Existe(Socio socio)
         {

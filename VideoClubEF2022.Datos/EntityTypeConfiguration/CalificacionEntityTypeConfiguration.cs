@@ -8,11 +8,11 @@ using VideoClubEF2022.Entidades;
 
 namespace VideoClubEF2022.Datos.EntityTypeConfigurations
 {
-    public class SoporteEntityTypeConfigurations : EntityTypeConfiguration<Soporte>
+    public class CalificacionEntityTypeConfiguration:EntityTypeConfiguration<Calificacion>
     {
-        public SoporteEntityTypeConfigurations()
+        public CalificacionEntityTypeConfiguration()
         {
-            ToTable("Soportes");
+            ToTable("Calificaciones");
         }
     }
 }

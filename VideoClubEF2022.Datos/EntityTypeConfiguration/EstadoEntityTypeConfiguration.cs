@@ -8,11 +8,11 @@ using VideoClubEF2022.Entidades;
 
 namespace VideoClubEF2022.Datos.EntityTypeConfigurations
 {
-    public class ProvinciasEntityTypeConfigurations:EntityTypeConfiguration<Provincia>
+    public class EstadoEntityTypeConfiguration : EntityTypeConfiguration<Estado>
     {
-        public ProvinciasEntityTypeConfigurations()
+        public EstadoEntityTypeConfiguration()
         {
-            ToTable("Provincias");
+            ToTable("Estados");
         }
     }
 }

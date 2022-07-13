@@ -13,6 +13,6 @@ namespace VideoClubEF2022.Servicios.Servicios.Facades
         void Guardar(Socio socio);
         void Borrar(int socioId);
         bool Existe(Socio socio);
-        bool EstaRelacionado(Socio socio);
+        
     }
 }

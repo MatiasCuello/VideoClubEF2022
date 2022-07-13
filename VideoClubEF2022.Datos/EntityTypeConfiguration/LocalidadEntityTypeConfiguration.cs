@@ -6,13 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using VideoClubEF2022.Entidades;
 
-namespace VideoClubEF2022.Datos.EntityTypeConfiguration
+namespace VideoClubEF2022.Datos.EntityTypeConfigurations
 {
-    public class PeliculaEntityTypeConfigurations:EntityTypeConfiguration<Pelicula>
+    public class LocalidadEntityTypeConfiguration:EntityTypeConfiguration<Localidad>
     {
-        public PeliculaEntityTypeConfigurations()
+        public LocalidadEntityTypeConfiguration()
         {
-            ToTable("Peliculas");
+            ToTable("Localidades");
         }
     }
 }
