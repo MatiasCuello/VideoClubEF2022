@@ -79,10 +79,11 @@ namespace VideoClubEF2022.Windows
             // 
             this.ProvinciasComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ProvinciasComboBox.FormattingEnabled = true;
-            this.ProvinciasComboBox.Location = new System.Drawing.Point(138, 223);
+            this.ProvinciasComboBox.Location = new System.Drawing.Point(138, 188);
             this.ProvinciasComboBox.Name = "ProvinciasComboBox";
             this.ProvinciasComboBox.Size = new System.Drawing.Size(250, 21);
             this.ProvinciasComboBox.TabIndex = 6;
+            this.ProvinciasComboBox.SelectedIndexChanged += new System.EventHandler(this.ProvinciasComboBox_SelectedIndexChanged);
             // 
             // lblLocalidad
             // 
@@ -99,7 +100,7 @@ namespace VideoClubEF2022.Windows
             // 
             this.LocalidadesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LocalidadesComboBox.FormattingEnabled = true;
-            this.LocalidadesComboBox.Location = new System.Drawing.Point(138, 192);
+            this.LocalidadesComboBox.Location = new System.Drawing.Point(138, 223);
             this.LocalidadesComboBox.Name = "LocalidadesComboBox";
             this.LocalidadesComboBox.Size = new System.Drawing.Size(250, 21);
             this.LocalidadesComboBox.TabIndex = 5;

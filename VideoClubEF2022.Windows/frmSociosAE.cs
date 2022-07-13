@@ -29,7 +29,6 @@ namespace VideoClubEF2022.Windows
             base.OnLoad(e);
             servicio = new ServicioSocios();
             HelperCombo.CargarDatosComboTiposDocumentos(ref TipoDocumentoComboBox);
-            HelperCombo.CargarDatosComboLocalidades(ref LocalidadesComboBox);
             HelperCombo.CargarDatosComboProvincias(ref ProvinciasComboBox);
             if (socio != null)
             {
@@ -38,8 +37,9 @@ namespace VideoClubEF2022.Windows
                 TipoDocumentoComboBox.SelectedValue = socio.TipoDocumento.Descripcion;
                 NroDocumentoTextBox.Text = socio.NroDocumento;
                 DireccionTextBox.Text = socio.Direccion;
-                LocalidadesComboBox.SelectedValue = socio.Localidad.NombreLocalidad;
-                ProvinciasComboBox.SelectedValue = socio.Provincia.NombreProvincia;
+                LocalidadesComboBox.SelectedValue = socio.Provincia.ProvinciaId;
+                HelperCombo.CargarDatosComboLocalidades(ref ProvinciasComboBox, socio.Provincia);
+                ProvinciasComboBox.SelectedValue = socio.Localidad.LocalidadId;
                 FechaNacDateTimePicker.Value = socio.FechaNacimiento;
 
             }
@@ -133,7 +133,19 @@ namespace VideoClubEF2022.Windows
             return valido;
         }
 
+        private void ProvinciasComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ProvinciasComboBox.SelectedIndex!=0)
+            {
+                var provincia = (Provincia)ProvinciasComboBox.SelectedItem;
+                HelperCombo.CargarDatosComboLocalidades(ref LocalidadesComboBox, provincia);
 
+            }
+            else
+            {
+                LocalidadesComboBox.DataSource = null;
+            }
+        }
     }
 }
 
