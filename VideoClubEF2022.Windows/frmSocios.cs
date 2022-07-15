@@ -106,5 +106,47 @@ namespace VideoClubEF2022.Windows
                     "Error");
             }
         }
+
+        private void tsbEditar_Click(object sender, EventArgs e)
+        {
+            if (dgvDatos.SelectedRows.Count == 0)
+            {
+                return;
+            }
+            var r = dgvDatos.SelectedRows[0];
+            Socio s = (Socio)r.Tag;
+            Socio socioAuxiliar = (Socio)s.Clone();
+
+            try
+            {
+                frmSociosAE frm = new frmSociosAE()
+                    { Text = "Editar socio" };
+                frm.SetSocio(s);
+                DialogResult dr = frm.ShowDialog(this);
+                if (dr == DialogResult.Cancel)
+                {
+                    return;
+                }
+                s = frm.GetSocio();
+                if (!servicio.Existe(s))
+                {
+                    servicio.Guardar(s);
+                    HelperGrilla.SetearFila(r, s);
+                    HelperMensaje.Mensaje(TipoMensaje.OK, "Socio editado", "Mensaje");
+                }
+                else
+                {
+                    HelperGrilla.SetearFila(r, socioAuxiliar);
+                    HelperMensaje.Mensaje(TipoMensaje.ERROR, "Socio ya existente", "Error");
+                }
+
+            }
+            catch (Exception exception)
+            {
+                HelperGrilla.SetearFila(r, socioAuxiliar);
+
+                HelperMensaje.Mensaje(TipoMensaje.ERROR, exception.Message, "Error");
+            }
+        }
     }
 }

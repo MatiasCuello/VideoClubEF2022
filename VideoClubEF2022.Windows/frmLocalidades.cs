@@ -127,7 +127,7 @@ namespace VideoClubEF2022.Windows
             {
                 return;
             }
-
+            
             var r = dgvDatos.SelectedRows[0];
             Localidad l = (Localidad) r.Tag;
             Localidad localidadAuxiliar = (Localidad) l.Clone();

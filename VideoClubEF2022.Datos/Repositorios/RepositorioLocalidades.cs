@@ -123,7 +123,7 @@ namespace VideoClubEF2022.Datos.Repositorios
         {
             try
             {
-                IQueryable<Localidad> query = context.Localidades;
+                IQueryable<Localidad> query = context.Localidades.Include(l=>l.Provincia);
                 if (provincia != null)
                 {
                     query = query.Where(l => l.ProvinciaId == provincia.ProvinciaId);

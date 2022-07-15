@@ -107,6 +107,7 @@ namespace VideoClubEF2022.Windows
             this.LocalidadesComboBox.Name = "LocalidadesComboBox";
             this.LocalidadesComboBox.Size = new System.Drawing.Size(250, 21);
             this.LocalidadesComboBox.TabIndex = 5;
+            this.LocalidadesComboBox.SelectedIndexChanged += new System.EventHandler(this.LocalidadesComboBox_SelectedIndexChanged);
             // 
             // lblProvincia
             // 
@@ -442,6 +443,7 @@ namespace VideoClubEF2022.Windows
             this.Name = "frmSociosAE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSociosAE";
+            this.Load += new System.EventHandler(this.frmSociosAE_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

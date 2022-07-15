@@ -190,6 +190,7 @@ namespace VideoClubEF2022.Windows
             this.tsbEditar.Size = new System.Drawing.Size(41, 51);
             this.tsbEditar.Text = "Editar";
             this.tsbEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
             // 
             // tsbBorrar
             // 

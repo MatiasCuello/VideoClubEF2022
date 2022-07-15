@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VideoClubEF2022.Entidades
 {
-    public class Socio
+    public class Socio:ICloneable
     {
         public int SocioId { get; set; }
         public string Nombre { get; set; }
@@ -27,8 +27,9 @@ namespace VideoClubEF2022.Entidades
         public TipoDocumento TipoDocumento { get; set; }
 
 
-
-
-
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
     }
 }

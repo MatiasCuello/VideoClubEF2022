@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics.Tracing;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using VideoClubEF2022.Entidades;
 using VideoClubEF2022.Servicios.Servicios;
@@ -45,6 +37,8 @@ namespace VideoClubEF2022.Windows
                 SancionadoCheckBox.Checked = socio.Sancionado;
 
             }
+           
+           
         }
 
 
@@ -141,6 +135,11 @@ namespace VideoClubEF2022.Windows
             return valido;
         }
 
+        public void SetSocio(Socio s)
+        {
+            this.socio = s;
+        }
+
         private Provincia provincia = null;
         private void ProvinciasComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -158,20 +157,15 @@ namespace VideoClubEF2022.Windows
 
         }
 
+        private void frmSociosAE_Load(object sender, EventArgs e)
+        {
 
+        }
 
-        //private void ProvinciasComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    if (ProvinciasComboBox.SelectedIndex!=0)
-        //    {
-        //        var provincia = (Provincia)ProvinciasComboBox.SelectedItem;
-        //        HelperCombo.CargarDatosComboLocalidades(ref LocalidadesComboBox, provincia);
+        private void LocalidadesComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-        //    }
-        //    else
-        //    {
-        //        LocalidadesComboBox.DataSource = null;
-        //    }
+        }
     }
 
 
