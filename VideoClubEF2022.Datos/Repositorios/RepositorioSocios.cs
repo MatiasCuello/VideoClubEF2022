@@ -58,7 +58,8 @@ namespace VideoClubEF2022.Datos.Repositorios
             }
         }
 
-        public List<Socio> GetLista(Localidad localidad=null, Provincia provincia=null,TipoDocumento tipoDocumento=null)
+        public List<Socio> GetLista
+            (Localidad localidad=null, Provincia provincia=null,TipoDocumento tipoDocumento=null)
         {
             try
             {
@@ -86,6 +87,19 @@ namespace VideoClubEF2022.Datos.Repositorios
         {
             try
             {
+                if (socio.Provincia != null)
+                {
+                    context.Provincias.Attach(socio.Provincia);
+                }
+                if (socio.Localidad != null)
+                {
+                    context.Localidades.Attach(socio.Localidad);
+                }
+                if (socio.TipoDocumento != null)
+                {
+                    context.TiposDocumentos.Attach(socio.TipoDocumento);
+                }
+
                 if (socio.SocioId == 0)
                 {
                     context.Socios.Add(socio);

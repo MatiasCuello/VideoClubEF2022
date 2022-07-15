@@ -877,6 +877,15 @@
   <ItemGroup>
     <None Include="Resources\workers_70px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Menu Female_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\denied_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked_user_male_30px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

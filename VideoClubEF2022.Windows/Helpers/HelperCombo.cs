@@ -27,7 +27,7 @@ namespace VideoClubEF2022.Windows.Helpers
             combo.ValueMember = "ProvinciaId";
             combo.SelectedIndex = 0;
         }
-        public static void CargarDatosComboLocalidades(ref ComboBox combo,Provincia provincia)
+        public static void CargarDatosComboLocalidades(ref ComboBox combo, Provincia provincia=null)
         {
             IServicioLocalidades servicio = new ServicioLocalidades();
             var lista = servicio.GetLista(provincia);

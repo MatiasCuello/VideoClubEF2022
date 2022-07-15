@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VideoClubEF2022.Datos.Repositorios.Facades;
 using VideoClubEF2022.Entidades;
 
@@ -16,6 +14,11 @@ namespace VideoClubEF2022.Datos.Repositorios
         public RepositorioProvincias()
         {
             context = new VideoClubEF2022DbContext();
+        }
+
+        public RepositorioProvincias(VideoClubEF2022DbContext context)
+        {
+            this.context = context;
         }
 
         public void Borrar(int provinciaId)
@@ -48,6 +51,19 @@ namespace VideoClubEF2022.Datos.Repositorios
             {
                 throw new Exception(e.Message);
             }
+        }
+
+        public Provincia GetProvinciaPorId(int id)
+        {
+            try
+            {
+                return context.Provincias.SingleOrDefault(p => p.ProvinciaId == id);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+
         }
 
         public bool Existe(Provincia provincia)

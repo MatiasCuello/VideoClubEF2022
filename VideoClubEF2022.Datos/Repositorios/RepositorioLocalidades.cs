@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VideoClubEF2022.Datos.Repositorios.Facades;
 using VideoClubEF2022.Entidades;
 
@@ -17,15 +15,20 @@ namespace VideoClubEF2022.Datos.Repositorios
         {
             context = new VideoClubEF2022DbContext();
         }
-        
+
+        public RepositorioLocalidades(VideoClubEF2022DbContext context)
+        {
+            this.context = context;
+        }
+
         public void Guardar(Localidad localidad)
         {
             try
             {
-                //if (localidad.Provincia != null)
-                //{
-                //    context.Provincias.Attach(localidad.Provincia);
-                //}
+                if (localidad.Provincia != null)
+                {
+                    context.Provincias.Attach(localidad.Provincia);
+                }
                 if (localidad.LocalidadId == 0)
                 {
                     context.Localidades.Add(localidad);
@@ -60,12 +63,13 @@ namespace VideoClubEF2022.Datos.Repositorios
                 if (localidad.LocalidadId == 0)
                 {
                     return context.Localidades
-                        .Any(l => l.NombreLocalidad == localidad.NombreLocalidad);
+                        .Any(l => l.NombreLocalidad == localidad.NombreLocalidad && l.ProvinciaId==localidad.ProvinciaId);
                     
                 }
 
-                return context.Localidades.Any(l => l.NombreLocalidad == localidad.NombreLocalidad &&
-                                                    l.LocalidadId != localidad.LocalidadId);
+                return context.Localidades.Any(l => l.NombreLocalidad == localidad.NombreLocalidad 
+                                                    &&  l.ProvinciaId == localidad.ProvinciaId
+                                                   && l.LocalidadId != localidad.LocalidadId);
             }
             catch (Exception e)
             {
@@ -119,8 +123,12 @@ namespace VideoClubEF2022.Datos.Repositorios
         {
             try
             {
-                return context.Localidades
-                    .Include(l => l.Provincia)
+                IQueryable<Localidad> query = context.Localidades;
+                if (provincia != null)
+                {
+                    query = query.Where(l => l.ProvinciaId == provincia.ProvinciaId);
+                }
+                return query
                     .ToList();
             }
             catch (Exception e)

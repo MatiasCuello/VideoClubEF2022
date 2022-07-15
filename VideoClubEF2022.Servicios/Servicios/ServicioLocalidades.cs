@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using VideoClubEF2022.Datos;
 using VideoClubEF2022.Datos.Repositorios;
 using VideoClubEF2022.Datos.Repositorios.Facades;
 using VideoClubEF2022.Entidades;
@@ -13,10 +11,14 @@ namespace VideoClubEF2022.Servicios.Servicios
     public class ServicioLocalidades : IServicioLocalidades
     {
         private readonly IRepositorioLocalidades repositorio;
+        private readonly IRepositorioProvincias repositorioProvincias;
+        private readonly VideoClubEF2022DbContext context;
 
         public ServicioLocalidades()
         {
-            repositorio = new RepositorioLocalidades();
+            context = new VideoClubEF2022DbContext();
+            repositorio = new RepositorioLocalidades(context);
+            repositorioProvincias = new RepositorioProvincias(context);
         }
         public void Borrar(int localidadId)
         {
@@ -73,6 +75,7 @@ namespace VideoClubEF2022.Servicios.Servicios
             try
             {
                 repositorio.Guardar(localidad);
+                localidad.Provincia = repositorioProvincias.GetProvinciaPorId(localidad.ProvinciaId);
             }
             catch (Exception e)
             {

@@ -225,6 +225,7 @@ namespace VideoClubEF2022.Windows
             this.MaximumSize = new System.Drawing.Size(820, 500);
             this.MinimumSize = new System.Drawing.Size(820, 500);
             this.Name = "frmSocios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSocios";
             this.Load += new System.EventHandler(this.frmSocios_Load);
             this.panel1.ResumeLayout(false);

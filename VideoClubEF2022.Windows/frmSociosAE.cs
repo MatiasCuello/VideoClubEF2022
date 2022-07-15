@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -30,21 +31,22 @@ namespace VideoClubEF2022.Windows
             servicio = new ServicioSocios();
             HelperCombo.CargarDatosComboTiposDocumentos(ref TipoDocumentoComboBox);
             HelperCombo.CargarDatosComboProvincias(ref ProvinciasComboBox);
+            //HelperCombo.CargarDatosComboLocalidades(ref LocalidadesComboBox);
             if (socio != null)
             {
                 NombreTextBox.Text = socio.Nombre;
                 ApellidoTextBox.Text = socio.Apellido;
-                TipoDocumentoComboBox.SelectedValue = socio.TipoDocumento.Descripcion;
+                TipoDocumentoComboBox.SelectedValue = socio.TipoDocumento.TipoDocumentoId;
                 NroDocumentoTextBox.Text = socio.NroDocumento;
                 DireccionTextBox.Text = socio.Direccion;
-                LocalidadesComboBox.SelectedValue = socio.Provincia.ProvinciaId;
-                HelperCombo.CargarDatosComboLocalidades(ref ProvinciasComboBox, socio.Provincia);
-                ProvinciasComboBox.SelectedValue = socio.Localidad.LocalidadId;
+                LocalidadesComboBox.SelectedValue = socio.Localidad.LocalidadId;
+                ProvinciasComboBox.SelectedValue = socio.Provincia.ProvinciaId;
                 FechaNacDateTimePicker.Value = socio.FechaNacimiento;
+                SancionadoCheckBox.Checked = socio.Sancionado;
 
             }
         }
-    
+
 
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -68,12 +70,18 @@ namespace VideoClubEF2022.Windows
 
                 socio.Nombre = NombreTextBox.Text;
                 socio.Apellido = ApellidoTextBox.Text;
-                socio.TipoDocumento = ((TipoDocumento)TipoDocumentoComboBox.SelectedItem);
+                socio.TipoDocumento = ((TipoDocumento) TipoDocumentoComboBox.SelectedItem);
                 socio.NroDocumento = NroDocumentoTextBox.Text;
                 socio.Direccion = DireccionTextBox.Text;
-                socio.Localidad = ((Localidad)LocalidadesComboBox.SelectedItem);
-                socio.Provincia = ((Provincia)ProvinciasComboBox.SelectedItem);
+                socio.Localidad = ((Localidad) LocalidadesComboBox.SelectedItem);
+                socio.Provincia = ((Provincia) ProvinciasComboBox.SelectedItem);
                 socio.FechaNacimiento = FechaNacDateTimePicker.Value;
+                //if (socio.Sancionado == SancionadoCheckBox.Checked)
+                //{
+                //    socio.Sancionado = true;
+                //    socio.Activo = false;
+                //}
+                
                 DialogResult = DialogResult.OK;
             }
         }
@@ -124,28 +132,49 @@ namespace VideoClubEF2022.Windows
                 errorProvider1.SetError(ProvinciasComboBox, "Debe seleccionar una provincia");
             }
 
-            if (FechaNacDateTimePicker.Value.Date==DateTime.Now.Date )
+            if (FechaNacDateTimePicker.Value.Date == DateTime.Now.Date)
             {
                 valido = false;
                 errorProvider1.SetError(FechaNacDateTimePicker, "Debe seleccionar una fecha");
             }
-
+            
             return valido;
         }
 
+        private Provincia provincia = null;
         private void ProvinciasComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ProvinciasComboBox.SelectedIndex!=0)
+            if (ProvinciasComboBox.SelectedIndex != 0)
             {
-                var provincia = (Provincia)ProvinciasComboBox.SelectedItem;
+                provincia = (Provincia)ProvinciasComboBox.SelectedItem;
                 HelperCombo.CargarDatosComboLocalidades(ref LocalidadesComboBox, provincia);
 
             }
             else
             {
                 LocalidadesComboBox.DataSource = null;
+                provincia = null;
             }
+
         }
+
+
+
+        //private void ProvinciasComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (ProvinciasComboBox.SelectedIndex!=0)
+        //    {
+        //        var provincia = (Provincia)ProvinciasComboBox.SelectedItem;
+        //        HelperCombo.CargarDatosComboLocalidades(ref LocalidadesComboBox, provincia);
+
+        //    }
+        //    else
+        //    {
+        //        LocalidadesComboBox.DataSource = null;
+        //    }
     }
+
+
 }
+
 

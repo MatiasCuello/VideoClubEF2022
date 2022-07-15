@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using VideoClubEF2022.Entidades;
 using VideoClubEF2022.Servicios.Servicios;
@@ -55,7 +48,8 @@ namespace VideoClubEF2022.Windows
                 }
 
                 localidad.NombreLocalidad = LocalidadTextBox.Text;
-                localidad.Provincia = (Provincia) ProvinciasComboBox.SelectedItem;
+                localidad.ProvinciaId =(int) ProvinciasComboBox.SelectedValue;
+                //localidad.Provincia = (Provincia) ProvinciasComboBox.SelectedItem;
                 DialogResult = DialogResult.OK;
             }
         }

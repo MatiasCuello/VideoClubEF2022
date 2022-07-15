@@ -32,6 +32,11 @@ namespace VideoClubEF2022.Windows
         private void frmLocalidades_Load(object sender, EventArgs e)
         {
             servicio = new ServicioLocalidades();
+            RecargarGrilla();
+        }
+
+        private void RecargarGrilla()
+        {
             try
             {
                 lista = servicio.GetLista(null);
@@ -60,6 +65,7 @@ namespace VideoClubEF2022.Windows
                 if (!servicio.Existe(localidad))
                 {
                     servicio.Guardar(localidad);
+                    //RecargarGrilla();
                     DataGridViewRow r = HelperGrilla.ConstruirFila(dgvDatos);
                     HelperGrilla.SetearFila(r, localidad);
                     HelperGrilla.AgregarFila(dgvDatos, r);
@@ -74,7 +80,7 @@ namespace VideoClubEF2022.Windows
             }
             catch (Exception exception)
             {
-                HelperMensaje.Mensaje(TipoMensaje.ERROR, exception.Message, "Error");
+                HelperMensaje.Mensaje(TipoMensaje.ERROR, "No se pudo ingresar la localidad", "Error");
             }
         }
 

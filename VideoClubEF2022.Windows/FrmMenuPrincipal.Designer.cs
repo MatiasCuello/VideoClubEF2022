@@ -179,7 +179,7 @@ namespace VideoClubEF2022.Windows
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(353, 19);
+            this.label1.Location = new System.Drawing.Point(354, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(294, 32);
             this.label1.TabIndex = 24;
@@ -188,7 +188,7 @@ namespace VideoClubEF2022.Windows
             // pictureBox1
             // 
             this.pictureBox1.Image = global::VideoClubEF2022.Windows.Properties.Resources.dvd_logo_30px;
-            this.pictureBox1.Location = new System.Drawing.Point(298, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(299, 34);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(43, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;

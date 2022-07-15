@@ -693,6 +693,16 @@ namespace VideoClubEF2022.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap checked_user_male_30px {
+            get {
+                object obj = ResourceManager.GetObject("checked_user_male_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cinema_30px {
             get {
                 object obj = ResourceManager.GetObject("cinema_30px", resourceCulture);
@@ -786,6 +796,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap clapperboard_50px4 {
             get {
                 object obj = ResourceManager.GetObject("clapperboard_50px4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap denied_30px {
+            get {
+                object obj = ResourceManager.GetObject("denied_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1976,6 +1996,16 @@ namespace VideoClubEF2022.Windows.Properties {
         internal static System.Drawing.Bitmap timecode_50px4 {
             get {
                 object obj = ResourceManager.GetObject("timecode_50px4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Menu_Female_30px {
+            get {
+                object obj = ResourceManager.GetObject("User Menu Female_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
